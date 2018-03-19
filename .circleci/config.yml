@@ -1,0 +1,62 @@
+defaults: &defaults
+  working_directory: ~/app
+  docker:
+    - image: circleci/node:latest
+
+version: 2
+jobs:
+  docs:
+    <<: *defaults
+    steps:
+      - checkout
+      - run:
+          name: Create the docs
+          command: npx docpress b
+      - run:
+          name: Copy circle ci workflow
+          command: cp -R .circleci/ gh-pages/.circleci
+      - run:
+          name: Set git user
+          command: cat ./scripts/v1/git/user | sh -s a1vy a01101100vy@gmail.com
+      - run:
+          name: Push to gh-pages
+          command: cat ./scripts/v1/gh/pages | sh -s gh-pages/.
+  published:
+    <<: *defaults
+    steps:
+      - checkout
+      - run:
+          name: CloufFlare - Purge all files
+          command: |
+            curl -X DELETE "https://api.cloudflare.com/client/v4/zones/${CF_ZONE}/purge_cache" \
+             -H "X-Auth-Email: ${CF_AUTH_EMAIL}" \
+             -H "X-Auth-Key: ${CF_AUTH_KEY}" \
+             -H "Content-Type: application/json" \
+             --data '{"purge_everything":true}'
+      - run:
+          name: Notify
+          command: cat ./v1/webhook | sh -s $WEBHOOK ./webhook.json
+
+workflows:
+  version: 2
+  write-docs:
+    jobs:
+      - docs:
+          filters:
+            branches:
+              only:
+                - master
+  refresh-website:
+    jobs:
+      - published:
+          filters:
+            branches:
+              only:
+                - gh-pages
+
+experimental:
+  notify:
+    branches:
+      only:
+        - master
+        - gh-pages
