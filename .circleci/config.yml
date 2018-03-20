@@ -10,16 +10,16 @@ jobs:
       - checkout
       - run:
           name: Run the webhook
-          command: cat ./docs/webhook | bash -s $WEBHOOK ./self/.webhook.json
+          command: cat ./docs/v1/webhook | sh -s $WEBHOOK ./self/.webhook.json
       - run:
           name: Build the docs
           command: npx marked -o docs/index.html cat ./README.md
       - run:
           name: Set git user
-          command: cat ./docs/git/user | bash
+          command: cat ./docs/v1/git/user | sh -s a1vy a01101100vy@gmail.com
       - run:
-          name: Force update
-          command: cat ./docs/git/update | bash
+          name: Update repo
+          command: cat ./docs/v1/git/update | sh
 
 workflows:
   version: 2

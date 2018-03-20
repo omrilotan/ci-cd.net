@@ -1,0 +1,7 @@
+name=$1
+email=$2
+: ${name:="$(git log -1 --pretty=%an)"}
+: ${email:="$(git log -1 --pretty=%ae)"}
+
+[ -z $(git config user.name) ] && git config user.name $name
+[ -z $(git config user.email) ] && git config user.email $email

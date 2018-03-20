@@ -1,0 +1,22 @@
+HOOK=$1
+: ${HOOK:="$WEBHOOK"}
+if [ -z "$HOOK" ]; then
+	echo "Webhook URL not found"
+	exit 0
+fi
+
+JSON=$2
+: ${JSON:=".webhook.json"}
+
+if [ ! -f $JSON ]; then
+    echo "$JSON JSON File not found, using GET"
+    curl $HOOK
+	exit 0
+fi
+
+TS=$(date +%s)
+FILE="webhook-processed-${TS}.json"
+
+(echo "cat <<EOF"; cat $JSON; echo EOF) | sh > $FILE
+curl -X POST -H 'Content-type: application/json' --data @$FILE $HOOK
+rm $FILE
