@@ -1,0 +1,25 @@
+defaults: &defaults
+  working_directory: ~/app
+  machine: true
+
+version: 2
+jobs:
+  webhook:
+    <<: *defaults
+    steps:
+      - checkout
+      - run:
+          name: Run the webhook
+          command: cat ./docs/webhook | bash -s $WEBHOOK ./self/.webhook.json
+
+workflows:
+  version: 2
+  ci-cd:
+    jobs:
+      - webhook
+
+experimental:
+  notify:
+    branches:
+      only:
+        - master

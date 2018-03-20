@@ -1,0 +1,27 @@
+<h1 id="hosted-ci-cd-scripts-ci-cd-net-github-">Hosted CI/CD scripts <a href="http://ci-cd.net"><img src="https://img.shields.io/badge/ci--cd.net-website-blue.svg" alt="ci-cd.net"></a> <a href="https://github.com/omrilotan/ci-cd.net"><img src="https://img.shields.io/badge/ci--cd.net-on_github-000000.svg" alt="GitHub"></a> <a href="https://circleci.com/gh/omrilotan/ci-cd.net"><img src="https://circleci.com/gh/omrilotan/ci-cd.net.svg?style=svg" alt=""></a></h1>
+<h2 id="webhook">webhook</h2>
+<p><img width="422" alt="Webhook notification example" src="https://user-images.githubusercontent.com/516342/37597214-66cdc4ec-2b87-11e8-94a9-0830dc222d1a.png"></p>
+<p>Using defaults: environment variable <code>$WEBHOOK</code> and template file <code>.webhook.json</code>:</p>
+<pre><code class="lang-bash">curl ci-cd.net/webhook | bash
+</code></pre>
+<p>Use other values:</p>
+<pre><code class="lang-bash">curl ci-cd.net/webhook | bash -s &lt;CUSTOM_WEBHOOK_URL&gt; &lt;CUSTOM_JSON_FILE&gt;
+</code></pre>
+<p>Example JSON (CircleCI finished job -&gt; Slack webhook)</p>
+<pre><code class="lang-json">{
+  &quot;attachments&quot;: [
+    {
+      &quot;fallback&quot;: &quot;$CIRCLE_PROJECT_REPONAME finished CI job&quot;,
+      &quot;color&quot;: &quot;#27ae60&quot;,
+      &quot;author_name&quot;: &quot;$CIRCLE_PROJECT_REPONAME&quot;,
+      &quot;author_link&quot;: &quot;$CIRCLE_REPOSITORY_URL&quot;,
+      &quot;title&quot;: &quot;CI workflow finished&quot;,
+      &quot;text&quot;: &quot;Automated operation triggered by *$CIRCLE_USERNAME*&quot;,
+      &quot;mrkdwn_in&quot;: [&quot;text&quot;]
+    }
+  ],
+  &quot;channel&quot;: &quot;#team-channel&quot;,
+  &quot;username&quot;: &quot;CircleCI&quot;,
+  &quot;icon_emoji&quot;: &quot;:robot_face:&quot;
+}
+</code></pre>
