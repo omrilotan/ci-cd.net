@@ -1,4 +1,5 @@
-# Hosted CI/CD scripts [![ci-cd.net](https://img.shields.io/badge/ci--cd.net-website-blue.svg)](http://ci-cd.net) [![GitHub](https://img.shields.io/badge/ci--cd.net-on_github-000000.svg)](https://github.com/omrilotan/ci-cd.net) [![](https://circleci.com/gh/omrilotan/ci-cd.net.svg?style=svg)](https://circleci.com/gh/omrilotan/ci-cd.net)
+| <h1>Hosted CI/CD scripts</h1> | [<img width="100px" src="https://user-images.githubusercontent.com/516342/37674710-222bcabe-2c7c-11e8-9958-18d259cbc475.png"> ](http://ci-cd.net) | [![](https://img.shields.io/badge/-omrilotan%2Fci--cd.net-333333.svg?logo=github&colorA=ffffff)](https://github.com/omrilotan/ci-cd.net) | [![](https://circleci.com/gh/omrilotan/ci-cd.net.svg?style=svg)](https://circleci.com/gh/omrilotan/ci-cd.net) | [<img height="32px" src="https://user-images.githubusercontent.com/516342/37675827-f3016264-2c7e-11e8-9806-46341bec1d6c.png">](https://omrilotan.com)
+| --- | --- | --- | --- | ---
 
 ## Using hosted shell scripts
 Using a script with defaults
