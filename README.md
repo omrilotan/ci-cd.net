@@ -1,5 +1,4 @@
-| <h1>Hosted CI/CD scripts</h1> | [<img width="100px" src="https://user-images.githubusercontent.com/516342/37674710-222bcabe-2c7c-11e8-9958-18d259cbc475.png"> ](http://ci-cd.net) | [![](https://img.shields.io/badge/-omrilotan%2Fci--cd.net-333333.svg?logo=github&colorA=ffffff)](https://github.com/omrilotan/ci-cd.net) | [![](https://circleci.com/gh/omrilotan/ci-cd.net.svg?style=svg)](https://circleci.com/gh/omrilotan/ci-cd.net) | [<img height="32px" src="https://user-images.githubusercontent.com/516342/37675827-f3016264-2c7e-11e8-9806-46341bec1d6c.png">](https://omrilotan.com)
-| --- | --- | --- | --- | ---
+# Hosted CI/CD scripts [<img width="100px" src="https://user-images.githubusercontent.com/516342/37674710-222bcabe-2c7c-11e8-9958-18d259cbc475.png">](http://ci-cd.net) [![](https://img.shields.io/badge/-omrilotan%2Fci--cd.net-333333.svg?logo=github&colorA=ffffff)](https://github.com/omrilotan/ci-cd.net) [![](https://circleci.com/gh/omrilotan/ci-cd.net.svg?style=svg)](https://circleci.com/gh/omrilotan/ci-cd.net) [<img height="32px" src="https://user-images.githubusercontent.com/516342/37675827-f3016264-2c7e-11e8-9806-46341bec1d6c.png">](https://omrilotan.com)
 
 ## Using hosted shell scripts
 Using a script with defaults
@@ -19,6 +18,7 @@ curl ci-cd.net/v1/<SCRIPT> | sh -s <ARGUMENT_1> <ARGUMENT_2>
 | [webhook](#webhook) | Post (or Get) request to a webhook
 | [git/user](#gituser) | **If missing**, configure git user
 | [git/update](#gitupdate) | Commit changes if there are any changes to commit
+| [aws/cp](#awscp) | Upload files to AWS S3
 
 # V1
 
@@ -90,3 +90,18 @@ CircleCI finished job -> Slack webhook
 
 > #### Example
 > `curl ci-cd.net/v1/git/update | sh -s Automated commit from CI`
+
+## aws/cp
+> Upload file structure to S3 (recursive). Uses awscli (via pip)
+Your environment **must include** AWS access keys for this operation (`AWS_ACCESS_KEY_ID` `AWS_SECRET_ACCESS_KEY`)
+
+### Arguments
+
+| Argument | Role | Default
+| --- | --- | ---
+| 1 | _mandatory_, source file/directory | none
+| 2 | _mandatory_, AWS bucket destination | none
+| 3 | _optional_, Exclude pattern | none
+
+#### Example
+> `curl ci-cd.net/v1/aws/cp | sh -s docs/ s3://docs.website.com/ *.log`
