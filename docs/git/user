@@ -1,0 +1,2 @@
+[ -z $(git config user.email) ] && git config user.email $(git log -1 --pretty=%ae)
+[ -z $(git config user.name) ] && git config user.name $(git log -1 --pretty=%an)
