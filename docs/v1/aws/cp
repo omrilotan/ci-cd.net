@@ -1,0 +1,16 @@
+source=$1
+destination=$2
+if [ -z $source || $destination ]; then
+  echo "This script must receive source($source) and destination($destination) to execute"
+  exit 1
+fi
+
+sudo apt-get install python-pip python-dev build-essential
+sudo pip install awscli
+
+exclude=$3
+if [ -z $exclude ]; then
+  aws s3 cp --recursive $source $destination
+else
+  aws s3 cp --recursive $source $destination --exclude $exclude
+fi
