@@ -1,13 +1,68 @@
 <h1 id="hosted-ci-cd-scripts-ci-cd-net-github-">Hosted CI/CD scripts <a href="http://ci-cd.net"><img src="https://img.shields.io/badge/ci--cd.net-website-blue.svg" alt="ci-cd.net"></a> <a href="https://github.com/omrilotan/ci-cd.net"><img src="https://img.shields.io/badge/ci--cd.net-on_github-000000.svg" alt="GitHub"></a> <a href="https://circleci.com/gh/omrilotan/ci-cd.net"><img src="https://circleci.com/gh/omrilotan/ci-cd.net.svg?style=svg" alt=""></a></h1>
+<h2 id="using-hosted-shell-scripts">Using hosted shell scripts</h2>
+<p>Using a script with defaults</p>
+<pre><code>curl ci-cd.net/v1/&lt;SCIRIPT&gt; | sh
+</code></pre><p>Passing arguments</p>
+<pre><code class="lang-bash">curl ci-cd.net/v1/&lt;SCRIPT&gt; | sh -s &lt;ARGUMENT_1&gt; &lt;ARGUMENT_2&gt;
+</code></pre>
+<h2 id="toc">TOC</h2>
+<table>
+<thead>
+<tr>
+<th>script</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#webhook">webhook</a></td>
+<td>Post (or Get) request to a webhook</td>
+</tr>
+<tr>
+<td><a href="#gituser">git/user</a></td>
+<td><strong>If missing</strong>, configure git user</td>
+</tr>
+<tr>
+<td><a href="#gitupdate">git/update</a></td>
+<td>Commit changes if there are any changes to commit</td>
+</tr>
+</tbody>
+</table>
+<h1 id="v1">V1</h1>
 <h2 id="webhook">webhook</h2>
 <p><img width="422" alt="Webhook notification example" src="https://user-images.githubusercontent.com/516342/37597214-66cdc4ec-2b87-11e8-94a9-0830dc222d1a.png"></p>
-<p>Using defaults: environment variable <code>$WEBHOOK</code> and template file <code>.webhook.json</code>:</p>
-<pre><code class="lang-bash">curl ci-cd.net/webhook | bash
-</code></pre>
-<p>Use other values:</p>
-<pre><code class="lang-bash">curl ci-cd.net/webhook | bash -s &lt;CUSTOM_WEBHOOK_URL&gt; &lt;CUSTOM_JSON_FILE&gt;
-</code></pre>
-<p>Example JSON (CircleCI finished job -&gt; Slack webhook)</p>
+<blockquote>
+<p>The webhook will execute a POST a JSON file to the specified address, or a GET request when no JSON file is found. It will use the shell to &quot;process&quot; the JSON file, so any environment variables included in the text will be transformed.</p>
+</blockquote>
+<h3 id="arguments">Arguments</h3>
+<p><strong>No arguments</strong> - Use environment variable <code>WEBHOOK</code> and <code>.webhook.json</code> file</p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Role</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>webhook address</td>
+<td>$WEBHOOK</td>
+</tr>
+<tr>
+<td>2</td>
+<td>JSON to post</td>
+<td><code>.webhook.json</code></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<h4 id="example">Example</h4>
+<p><code>curl ci-cd.net/v1/webhook | sh -s $MY_WEBHOOK ./.custom-webhook-message.json</code></p>
+</blockquote>
+<h4 id="json-examples">JSON Examples</h4>
+<p>CircleCI finished job -&gt; Slack webhook</p>
 <pre><code class="lang-json">{
   &quot;attachments&quot;: [
     {
@@ -25,3 +80,61 @@
   &quot;icon_emoji&quot;: &quot;:robot_face:&quot;
 }
 </code></pre>
+<h2 id="git-user">git/user</h2>
+<blockquote>
+<p>Configure git user</p>
+</blockquote>
+<h3 id="arguments">Arguments</h3>
+<p><strong>No arguments</strong> - Use user from last commit</p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Role</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>webhook address</td>
+<td>$WEBHOOK</td>
+</tr>
+<tr>
+<td>2</td>
+<td>JSON to post</td>
+<td><code>.webhook.json</code></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<h4 id="example">Example</h4>
+<p><code>curl ci-cd.net/v1/git/user | sh -s CI-CD ci-cd@gmail.com</code></p>
+</blockquote>
+<h2 id="git-update">git/update</h2>
+<p><img width="624" alt="image" src="https://user-images.githubusercontent.com/516342/37645734-5cad4f7e-2c30-11e8-99ee-5d4462ee606b.png"></p>
+<blockquote>
+<p>Commit changes if there are any changes to commit. Then commit them upstream. This requires the environment holds push privileges, and a user has been configured (see <a href="#gituser">git/user</a>)</p>
+</blockquote>
+<h3 id="arguments">Arguments</h3>
+<p><strong>No arguments</strong> - Use a random commit message from <a href="https://whatthecommit.com/">whatthecommit.com</a></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Role</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>@</td>
+<td>commit message</td>
+<td>random commit message</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<h4 id="example">Example</h4>
+<p><code>curl ci-cd.net/v1/git/update | sh -s Automated commit from CI</code></p>
+</blockquote>
