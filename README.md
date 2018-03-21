@@ -1,4 +1,4 @@
-# Hosted CI/CD scripts [<img width="100px" src="https://user-images.githubusercontent.com/516342/37674710-222bcabe-2c7c-11e8-9958-18d259cbc475.png">](http://ci-cd.net) [![](https://img.shields.io/badge/-omrilotan%2Fci--cd.net-333333.svg?logo=github&colorA=ffffff)](https://github.com/omrilotan/ci-cd.net) [![](https://circleci.com/gh/omrilotan/ci-cd.net.svg?style=svg)](https://circleci.com/gh/omrilotan/ci-cd.net) [<img height="32px" src="https://user-images.githubusercontent.com/516342/37675827-f3016264-2c7e-11e8-9806-46341bec1d6c.png">](https://omrilotan.com)
+# [Hosted CI/CD scripts](https://github.com/omrilotan/ci-cd.net#readme)
 
 ## Using hosted shell scripts
 Using a script with defaults
@@ -105,3 +105,7 @@ Your environment **must include** AWS access keys for this operation (`AWS_ACCES
 
 #### Example
 > `curl ci-cd.net/v1/aws/cp | sh -s docs/ s3://docs.website.com/ *.log`
+
+---
+
+[Published via CircleCI](https://circleci.com/gh/omrilotan/ci-cd.net) [<img height="32px" src="https://user-images.githubusercontent.com/516342/37675827-f3016264-2c7e-11e8-9806-46341bec1d6c.png">](https://omrilotan.com)
