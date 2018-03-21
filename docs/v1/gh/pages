@@ -1,0 +1,23 @@
+source=$1
+if [ -z "$source" ]; then
+    echo "Source was not specified"
+    exit 0;
+fi
+
+message=$2
+: ${message:="$(curl -s whatthecommit.com/index.txt)"}
+
+origin=$(git remote get-url origin)
+git clone -b gh-pages --single-branch $origin GHPAGES_DIR
+
+cd GHPAGES_DIR
+ls | grep -v CNAME | xargs rm -rf
+cd ../
+
+cp -R $source GHPAGES_DIR
+
+cd GHPAGES_DIR
+git add .
+git commit -m "$message"
+git push origin gh-pages
+cd ../
