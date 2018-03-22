@@ -3,7 +3,7 @@
 ## Using hosted shell scripts
 Using a script with defaults
 ```
-curl ci-cd.net/v1/<SCIRIPT> | sh
+curl ci-cd.net/v1/<SCRIPT> | sh
 ```
 
 Passing arguments
@@ -19,6 +19,7 @@ curl ci-cd.net/v1/<SCRIPT> | sh -s <ARGUMENT_1> <ARGUMENT_2>
 | [git/user](#gituser) | **If missing**, configure git user
 | [git/update](#gitupdate) | Commit changes if there are any changes to commit
 | [aws/cp](#awscp) | Upload files to AWS S3
+| [gh/pages](#ghpages) | Commit a file or directory to gh-pages branch
 
 # V1
 
@@ -105,6 +106,23 @@ Your environment **must include** AWS access keys for this operation (`AWS_ACCES
 
 #### Example
 > `curl ci-cd.net/v1/aws/cp | sh -s docs/ s3://docs.website.com/ *.log`
+
+## gh/pages
+> commit a file or directory to gh-pages branch
+
+### Arguments
+
+| Argument | Role | Default
+| --- | --- | ---
+| 1 | _mandatory_, source | none
+| 2 | _optional_, commit message | a random commit message from [whatthecommit.com](https://whatthecommit.com/)
+
+#### Example
+Create documentation, push to gh-pages
+> ```sh
+> npx jsdoc docs/ -c .jsdocrc.json
+> curl ci-cd.net/v1/gh/pages docs
+> ```
 
 ---
 
