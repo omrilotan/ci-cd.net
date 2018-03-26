@@ -25,7 +25,11 @@ workflows:
   version: 2
   ci-cd:
     jobs:
-      - webhook
+      - webhook:
+          filters:
+            branches:
+              only:
+                - master
 
 experimental:
   notify:

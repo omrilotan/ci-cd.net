@@ -1,5 +1,7 @@
 # [Hosted CI/CD scripts](https://github.com/omrilotan/ci-cd.net#readme)
 
+A collection of hosted CI-CD generic helper scripts, which aim to streamline continues integration and delivery processes across services. This project's goal is to include non business logic scripts which can be used out-of-the-box or adapted by arguments.
+
 ## Using hosted shell scripts
 Using a script with defaults
 ```
@@ -24,6 +26,9 @@ curl ci-cd.net/v1/<SCRIPT> | sh -s <ARGUMENT_1> <ARGUMENT_2>
 # V1
 
 ## webhook
+
+<details>
+<summary>Post (or Get) request to a webhook</summary>
 
 <img width="422" alt="Webhook notification example" src="https://user-images.githubusercontent.com/516342/37597214-66cdc4ec-2b87-11e8-94a9-0830dc222d1a.png">
 
@@ -60,22 +65,32 @@ CircleCI finished job -> Slack webhook
   "icon_emoji": ":robot_face:"
 }
 ```
+</details>
 
 ## git/user
-> Configure git user
+
+<details>
+<summary>If missing, configure git user</summary>
+
+> If a git user is configured, it will be left as is. Otherwise configure git user
 
 ### Arguments
 **No arguments** - Use user from last commit
 
 | Argument | Role | Default
 | --- | --- | ---
-| 1 | webhook address | $WEBHOOK
-| 2 | JSON to post | `.webhook.json`
+| 1 | name | Last commit's user name
+| 2 | email | Last commit's user email
 
 > #### Example
 > `curl ci-cd.net/v1/git/user | sh -s CI-CD ci-cd@gmail.com`
 
+</details>
+
 ## git/update
+
+<details>
+<summary>Commit changes if there are any changes to commit</summary>
 
 <img width="624" alt="image" src="https://user-images.githubusercontent.com/516342/37645734-5cad4f7e-2c30-11e8-99ee-5d4462ee606b.png">
 
@@ -92,7 +107,13 @@ CircleCI finished job -> Slack webhook
 > #### Example
 > `curl ci-cd.net/v1/git/update | sh -s Automated commit from CI`
 
+</details>
+
 ## aws/cp
+
+<details>
+<summary>Upload files to AWS S3</summary>
+
 > Upload file structure to S3 (recursive). Uses awscli (via pip)
 Your environment **must include** AWS access keys for this operation (`AWS_ACCESS_KEY_ID` `AWS_SECRET_ACCESS_KEY`)
 
@@ -107,7 +128,13 @@ Your environment **must include** AWS access keys for this operation (`AWS_ACCES
 #### Example
 > `curl ci-cd.net/v1/aws/cp | sh -s docs/ s3://docs.website.com/ *.log`
 
+</details>
+
 ## gh/pages
+
+<details>
+<summary>Commit a file or directory to gh-pages branch</summary>
+
 > commit a file or directory to gh-pages branch
 
 ### Arguments
@@ -123,6 +150,8 @@ Create documentation, push to gh-pages
 > npx jsdoc docs/ -c .jsdocrc.json
 > curl ci-cd.net/v1/gh/pages docs
 > ```
+
+</details>
 
 ---
 
