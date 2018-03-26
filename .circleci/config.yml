@@ -4,7 +4,7 @@ defaults: &defaults
 
 version: 2
 jobs:
-  webhook:
+  docs:
     <<: *defaults
     steps:
       - checkout
@@ -25,7 +25,11 @@ workflows:
   version: 2
   ci-cd:
     jobs:
-      - webhook
+      - docs:
+          filters:
+            branches:
+              only:
+                - master
 
 experimental:
   notify:
