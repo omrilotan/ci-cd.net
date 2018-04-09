@@ -20,6 +20,7 @@ curl ci-cd.net/v1/<SCRIPT> | sh -s <ARGUMENT_1> <ARGUMENT_2>
 | [webhook](#webhook) | Post (or Get) request to a webhook
 | [git/user](#gituser) | **If missing**, configure git user
 | [git/update](#gitupdate) | Commit changes if there are any changes to commit
+| [git/run](#gitrun) | Run shell scripts right from a repository
 | [aws/cp](#awscp) | Upload files to AWS S3
 | [gh/pages](#ghpages) | Commit a file or directory to gh-pages branch
 
@@ -83,7 +84,6 @@ CircleCI finished job -> Slack webhook
 
 > Commit changes if there are any changes to commit. Then commit them upstream. This requires the environment holds push privileges, and a user has been configured (see [git/user](#gituser))
 
-
 ### Arguments
 **No arguments** - Use a random commit message from [whatthecommit.com](https://whatthecommit.com/)
 
@@ -93,6 +93,20 @@ CircleCI finished job -> Slack webhook
 
 > #### Example
 > `curl ci-cd.net/v1/git/update | sh -s Automated commit from CI`
+
+## git/run
+> Run shell scripts from a git repository
+
+### Arguments
+
+| Argument | Role | Default
+| --- | --- | ---
+| 1 | repository | none
+| 2 | script | none
+| @ | rest of the arguments are chained | none
+
+> #### Example
+> `curl ci-cd.net/v1/git/run | sh git@github.com:user/repo.git scripts/function.sh arg1 arg2`
 
 ## aws/cp
 > Upload file structure to S3 (recursive). Uses awscli (via pip)
