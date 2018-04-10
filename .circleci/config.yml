@@ -1,6 +1,7 @@
 defaults: &defaults
   working_directory: ~/app
-  machine: true
+  docker:
+    - image: circleci/node:latest
 
 version: 2
 jobs:
@@ -13,7 +14,7 @@ jobs:
           command: cat ./docs/v1/webhook | sh -s $WEBHOOK ./self/.webhook.json
       - run:
           name: Build the docs
-          command: cp ./README.md ./docs/index.md
+          command: npx markt README.md ./docs/index.html ./docs.template.html
       - run:
           name: Set git user
           command: cat ./docs/v1/git/user | sh -s a1vy a01101100vy@gmail.com

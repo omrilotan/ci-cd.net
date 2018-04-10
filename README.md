@@ -1,4 +1,4 @@
-# [Hosted CI/CD scripts](https://github.com/omrilotan/ci-cd.net#readme)
+# Hosted CI/CD scripts [![](https://user-images.githubusercontent.com/516342/38551453-17b7e8ca-3cb1-11e8-9754-b70c6e0f316c.png)](https://github.com/omrilotan/ci-cd.net#readme)
 
 A collection of hosted CI-CD generic helper scripts, which aim to streamline continues integration and delivery processes across services. This project's goal is to include non business logic scripts which can be used out-of-the-box or adapted by arguments.
 
