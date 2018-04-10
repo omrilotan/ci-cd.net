@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>CI-CD.net</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
+        <link rel="stylesheet" href="https://omrilotan.github.io/markt/styles.css">
+    </head>
+    <body>
+        <h1 id="hosted-ci-cd-scripts-">Hosted CI/CD scripts <a href="https://github.com/omrilotan/ci-cd.net#readme"><img src="https://user-images.githubusercontent.com/516342/38551453-17b7e8ca-3cb1-11e8-9754-b70c6e0f316c.png" alt=""></a></h1>
+<p>A collection of hosted CI-CD generic helper scripts, which aim to streamline continues integration and delivery processes across services. This project&#39;s goal is to include non business logic scripts which can be used out-of-the-box or adapted by arguments.</p>
+<h2 id="using-hosted-shell-scripts">Using hosted shell scripts</h2>
+<p>Using a script with defaults</p>
+<pre><code>curl ci-cd.net/v1/&lt;SCRIPT&gt; | sh
+</code></pre><p>Passing arguments</p>
+<pre><code class="lang-bash">curl ci-cd.net/v1/&lt;SCRIPT&gt; | sh -s &lt;ARGUMENT_1&gt; &lt;ARGUMENT_2&gt;
+</code></pre>
+<h2 id="toc">TOC</h2>
+<table>
+<thead>
+<tr>
+<th>script</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#webhook">webhook</a></td>
+<td>Post (or Get) request to a webhook</td>
+</tr>
+<tr>
+<td><a href="#gituser">git/user</a></td>
+<td><strong>If missing</strong>, configure git user</td>
+</tr>
+<tr>
+<td><a href="#gitupdate">git/update</a></td>
+<td>Commit changes if there are any changes to commit</td>
+</tr>
+<tr>
+<td><a href="#gitrun">git/run</a></td>
+<td>Run shell scripts right from a repository</td>
+</tr>
+<tr>
+<td><a href="#awscp">aws/cp</a></td>
+<td>Upload files to AWS S3</td>
+</tr>
+<tr>
+<td><a href="#ghpages">gh/pages</a></td>
+<td>Commit a file or directory to gh-pages branch</td>
+</tr>
+</tbody>
+</table>
+<h1 id="v1">V1</h1>
+<h2 id="webhook">webhook</h2>
+<p><img width="422" alt="Webhook notification example" src="https://user-images.githubusercontent.com/516342/37597214-66cdc4ec-2b87-11e8-94a9-0830dc222d1a.png"></p>
+<blockquote>
+<p>The webhook will execute a POST a JSON file to the specified address, or a GET request when no JSON file is found. It will use the shell to &quot;process&quot; the JSON file, so any environment variables included in the text will be transformed.</p>
+</blockquote>
+<h3 id="arguments">Arguments</h3>
+<p><strong>No arguments</strong> - Use environment variable <code>WEBHOOK</code> and <code>.webhook.json</code> file</p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Role</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>webhook address</td>
+<td>$WEBHOOK</td>
+</tr>
+<tr>
+<td>2</td>
+<td>JSON to post</td>
+<td><code>.webhook.json</code></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<h4 id="example">Example</h4>
+<p><code>curl ci-cd.net/v1/webhook | sh -s $MY_WEBHOOK ./.custom-webhook-message.json</code></p>
+</blockquote>
+<h4 id="json-examples">JSON Examples</h4>
+<p>CircleCI finished job -&gt; Slack webhook</p>
+<pre><code class="lang-json">{
+  &quot;attachments&quot;: [
+    {
+      &quot;fallback&quot;: &quot;$CIRCLE_PROJECT_REPONAME finished CI job&quot;,
+      &quot;color&quot;: &quot;#27ae60&quot;,
+      &quot;author_name&quot;: &quot;$CIRCLE_PROJECT_REPONAME&quot;,
+      &quot;author_link&quot;: &quot;$CIRCLE_REPOSITORY_URL&quot;,
+      &quot;title&quot;: &quot;CI workflow finished&quot;,
+      &quot;text&quot;: &quot;Automated operation triggered by *$CIRCLE_USERNAME*&quot;,
+      &quot;mrkdwn_in&quot;: [&quot;text&quot;]
+    }
+  ],
+  &quot;channel&quot;: &quot;#team-channel&quot;,
+  &quot;username&quot;: &quot;CircleCI&quot;,
+  &quot;icon_emoji&quot;: &quot;:robot_face:&quot;
+}
+</code></pre>
+<h2 id="git-user">git/user</h2>
+<blockquote>
+<p>Configure git user</p>
+</blockquote>
+<h3 id="arguments">Arguments</h3>
+<p><strong>No arguments</strong> - Use user from last commit</p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Role</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>name</td>
+<td>last commit&#39;s user name</td>
+</tr>
+<tr>
+<td>2</td>
+<td>email</td>
+<td>last commit&#39;s user email</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<h4 id="example">Example</h4>
+<p><code>curl ci-cd.net/v1/git/user | sh -s CI-CD ci-cd@gmail.com</code></p>
+</blockquote>
+<h2 id="git-update">git/update</h2>
+<p><img width="624" alt="image" src="https://user-images.githubusercontent.com/516342/37645734-5cad4f7e-2c30-11e8-99ee-5d4462ee606b.png"></p>
+<blockquote>
+<p>Commit changes if there are any changes to commit. Then commit them upstream. This requires the environment holds push privileges, and a user has been configured (see <a href="#gituser">git/user</a>)</p>
+</blockquote>
+<h3 id="arguments">Arguments</h3>
+<p><strong>No arguments</strong> - Use a random commit message from <a href="https://whatthecommit.com/">whatthecommit.com</a></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Role</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>@</td>
+<td>commit message</td>
+<td>random commit message</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<h4 id="example">Example</h4>
+<p><code>curl ci-cd.net/v1/git/update | sh -s Automated commit from CI</code></p>
+</blockquote>
+<h2 id="git-run">git/run</h2>
+<blockquote>
+<p>Run shell scripts from a git repository</p>
+</blockquote>
+<h3 id="arguments">Arguments</h3>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Role</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>repository</td>
+<td>none</td>
+</tr>
+<tr>
+<td>2</td>
+<td>script</td>
+<td>none</td>
+</tr>
+<tr>
+<td>@</td>
+<td>rest of the arguments are chained</td>
+<td>none</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<h4 id="example">Example</h4>
+<p><code>curl ci-cd.net/v1/git/run | sh git@github.com:user/repo.git scripts/function.sh arg1 arg2</code></p>
+</blockquote>
+<h2 id="aws-cp">aws/cp</h2>
+<blockquote>
+<p>Upload file structure to S3 (recursive). Uses awscli (via pip)
+Your environment <strong>must include</strong> AWS access keys for this operation (<code>AWS_ACCESS_KEY_ID</code> <code>AWS_SECRET_ACCESS_KEY</code>)</p>
+</blockquote>
+<h3 id="arguments">Arguments</h3>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Role</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><em>mandatory</em>, source file/directory</td>
+<td>none</td>
+</tr>
+<tr>
+<td>2</td>
+<td><em>mandatory</em>, AWS bucket destination</td>
+<td>none</td>
+</tr>
+<tr>
+<td>3</td>
+<td><em>optional</em>, Exclude pattern</td>
+<td>none</td>
+</tr>
+</tbody>
+</table>
+<h4 id="example">Example</h4>
+<blockquote>
+<p><code>curl ci-cd.net/v1/aws/cp | sh -s docs/ s3://docs.website.com/ *.log</code></p>
+</blockquote>
+<h2 id="gh-pages">gh/pages</h2>
+<blockquote>
+<p>commit a file or directory to gh-pages branch</p>
+</blockquote>
+<h3 id="arguments">Arguments</h3>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Role</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><em>mandatory</em>, source</td>
+<td>none</td>
+</tr>
+<tr>
+<td>2</td>
+<td><em>optional</em>, commit message</td>
+<td>a random commit message from <a href="https://whatthecommit.com/">whatthecommit.com</a></td>
+</tr>
+</tbody>
+</table>
+<h4 id="example">Example</h4>
+<p>Create documentation, push to gh-pages</p>
+<blockquote>
+<pre><code class="lang-sh">npx jsdoc docs/ -c .jsdocrc.json
+curl ci-cd.net/v1/gh/pages docs
+</code></pre>
+</blockquote>
+<hr>
+<p><a href="https://circleci.com/gh/omrilotan/ci-cd.net">Published via CircleCI</a> <a href="https://omrilotan.com"><img height="32px" src="https://user-images.githubusercontent.com/516342/37675827-f3016264-2c7e-11e8-9806-46341bec1d6c.png"></a></p>
+    </body>
+</html>
