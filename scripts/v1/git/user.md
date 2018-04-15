@@ -1,10 +1,5 @@
----
-title: git/user
-description: If missing, configure git user
-toc: true
----
-
-> Configure git user
+# git/user
+## If missing, configure git user
 
 ### Arguments
 **No arguments** - Use user from last commit

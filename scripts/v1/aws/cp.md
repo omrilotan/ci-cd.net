@@ -1,10 +1,6 @@
----
-title: aws/cp
-description: Upload files to AWS S3
-toc: true
----
-
-> Upload file structure to S3 (recursive). Uses awscli (via pip)
+# aws/cp
+## Upload files to AWS S3
+Upload file structure to S3 (recursive). Uses awscli (via pip)
 Your environment **must include** AWS access keys for this operation (`AWS_ACCESS_KEY_ID` `AWS_SECRET_ACCESS_KEY`)
 
 ### Arguments

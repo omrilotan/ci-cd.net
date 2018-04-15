@@ -1,10 +1,5 @@
----
-title: gh/pages
-description: Commit a file or directory to gh-pages branch
-toc: true
----
-
-> commit a file or directory to gh-pages branch
+# gh/pages
+## Commit a file or directory to gh-pages branch
 
 ### Arguments
 

@@ -1,10 +1,5 @@
----
-title: git/run
-description: Run shell scripts right from a repository
-toc: true
----
-
-> Run shell scripts from a git repository
+# git/run
+## Run shell scripts right from a repository
 
 ### Arguments
 
