@@ -10,17 +10,17 @@ jobs:
     steps:
       - checkout
       - run:
-          name: Run the webhook
-          command: cat ./docs/v1/webhook | sh -s $WEBHOOK ./self/.webhook.json
-      - run:
-          name: Build the docs
-          command: npx markt README.md ./docs/index.html ./docs.template.html
+          name: Create the docs
+          command: npx docpress b
       - run:
           name: Set git user
-          command: cat ./docs/v1/git/user | sh -s a1vy a01101100vy@gmail.com
+          command: cat ./scripts/v1/git/user | sh -s a1vy a01101100vy@gmail.com
       - run:
-          name: Update repo
-          command: cat ./docs/v1/git/update | sh
+          name: Push to gh-pages
+          command: cat ./scripts/v1/gh/pages | sh -s gh-pages/.
+      - run:
+          name: Notify
+          command: cat ./scripts/v1/webhook | sh -s $WEBHOOK ./self/.webhook.json
 
 workflows:
   version: 2

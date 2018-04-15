@@ -7,14 +7,14 @@ fi
 message=$2
 : ${message:="$(curl -s whatthecommit.com/index.txt)"}
 
-origin=$(git remote get-url origin)
+origin=$(git config --get remote.origin.url)
 git clone -b gh-pages --single-branch $origin GHPAGES_DIR
 
 cd GHPAGES_DIR
 ls | grep -v CNAME | xargs rm -rf
 cd ../
 
-cp -R $source GHPAGES_DIR
+cp -R ${source} GHPAGES_DIR
 
 cd GHPAGES_DIR
 git add .
