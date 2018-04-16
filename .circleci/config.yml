@@ -18,6 +18,18 @@ jobs:
       - run:
           name: Push to gh-pages
           command: cat ./scripts/v1/gh/pages | sh -s gh-pages/.
+  published:
+    <<: *defaults
+    steps:
+      - checkout
+      - run:
+          name: CloufFlare - Purge all files
+          command: |
+            curl -X DELETE "https://api.cloudflare.com/client/v4/zones/${CF_ZONE}/purge_cache" \
+             -H "X-Auth-Email: ${CF_AUTH_EMAIL}" \
+             -H "X-Auth-Key: ${CF_AUTH_KEY}" \
+             -H "Content-Type: application/json" \
+             --data '{"purge_everything":true}'
       - run:
           name: Notify
           command: cat ./scripts/v1/webhook | sh -s $WEBHOOK ./self/.webhook.json
@@ -31,6 +43,11 @@ workflows:
             branches:
               only:
                 - master
+      - published:
+          filters:
+            branches:
+              only:
+                - gh-pages
 
 experimental:
   notify:
