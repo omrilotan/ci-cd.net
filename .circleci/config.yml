@@ -13,6 +13,9 @@ jobs:
           name: Create the docs
           command: npx docpress b
       - run:
+          name: Copy circle ci workflow
+          command: cp -R .circleci/ gh-pages/.circleci
+      - run:
           name: Set git user
           command: cat ./scripts/v1/git/user | sh -s a1vy a01101100vy@gmail.com
       - run:
@@ -32,7 +35,7 @@ jobs:
              --data '{"purge_everything":true}'
       - run:
           name: Notify
-          command: cat ./scripts/v1/webhook | sh -s $WEBHOOK ./self/.webhook.json
+          command: cat ./v1/webhook | sh -s $WEBHOOK ./webhook.json
 
 workflows:
   version: 2
@@ -54,3 +57,4 @@ experimental:
     branches:
       only:
         - master
+        - gh-pages
