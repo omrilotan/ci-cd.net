@@ -1,17 +1,16 @@
 # gh/pages
+
 ## Commit a file or directory to gh-pages branch
+
+```sh
+npx jsdoc docs/ -c .jsdocrc.json # Create docs for example
+curl ci-cd.net/v1/gh/pages | sh -s docs/.
+```
 
 ### Arguments
 
-| Argument | Role | Default
-| --- | --- | ---
-| 1 | _mandatory_, source | none
-| 2 | _optional_, commit message | a random commit message from [whatthecommit.com](https://whatthecommit.com/)
-
-#### Example
-Create documentation, push to gh-pages
-> ```sh
-> npx jsdoc docs/ -c .jsdocrc.json
-> curl ci-cd.net/v1/gh/pages | sh -s docs/.
-> ```
+| # | Role | Default | Optionality
+| --- | --- | --- | ---
+| 1 | source | none | Mandatory
+| 2 | commit message | a random commit message from [whatthecommit.com](https://whatthecommit.com/) | Optional
 

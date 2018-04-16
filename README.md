@@ -1,6 +1,6 @@
 # Hosted CI/CD scripts [![](https://circleci.com/gh/omrilotan/ci-cd.net.svg?style=svg)](https://circleci.com/gh/omrilotan/ci-cd.net)
 
-### Visit [ci-cd.net](http://ci-cd.net) for full feature list
+### Visit [ci-cd.net](https://ci-cd.net) for full feature list
 
 A collection of hosted CI-CD generic helper scripts, which aim to streamline continues integration and delivery processes across services. This project's goal is to include non business logic scripts which can be used out-of-the-box or adapted by arguments.
 

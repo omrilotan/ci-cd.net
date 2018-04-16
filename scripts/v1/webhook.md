@@ -1,6 +1,11 @@
 # webhook
+
 ## Post (or Get) request to a webhook
 The webhook will execute a POST a JSON file to the specified address, or a GET request when no JSON file is found. It will use the shell to "process" the JSON file, so any environment variables included in the text will be transformed.
+
+```sh
+curl ci-cd.net/v1/webhook | sh -s $MY_WEBHOOK ./.custom-webhook-message.json
+```
 
 <img width="422" alt="Webhook notification example" src="https://user-images.githubusercontent.com/516342/37597214-66cdc4ec-2b87-11e8-94a9-0830dc222d1a.png">
 
@@ -8,16 +13,15 @@ The webhook will execute a POST a JSON file to the specified address, or a GET r
 ### Arguments
 **No arguments** - Use environment variable `WEBHOOK` and `.webhook.json` file
 
-| Argument | Role | Default
-| --- | --- | ---
-| 1 | webhook address | $WEBHOOK
-| 2 | JSON to post | `.webhook.json`
+| # | Role | Default | Optionality
+| --- | --- | --- | ---
+| 1 | webhook address | $WEBHOOK | Optional
+| 2 | JSON to post | `.webhook.json` | Optional
 
-> #### Example
-> `curl ci-cd.net/v1/webhook | sh -s $MY_WEBHOOK ./.custom-webhook-message.json`
 
-#### JSON Examples
-CircleCI finished job -> Slack webhook
+#### JSON Example
+- Webhook is in Slack format
+- Environment variables provided by CircleCI
 ```json
 {
   "attachments": [
