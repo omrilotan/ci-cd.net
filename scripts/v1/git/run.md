@@ -3,7 +3,7 @@
 ## Run shell scripts right from a repository
 
 ```sh
-curl ci-cd.net/v1/git/run | sh git@github.com:user/repo.git scripts/function.sh arg1 arg2
+curl ci-cd.net/v1/git/run | sh -s git@github.com:user/repo.git scripts/function.sh arg1 arg2
 ```
 
 ### Arguments
