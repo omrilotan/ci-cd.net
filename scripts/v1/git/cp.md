@@ -2,9 +2,11 @@
 
 ## Copy a file right from a repository
 
+<!--email_off-->
 ```sh
 curl ci-cd.net/v1/git/cp | sh -s git@github.com:user/repo.git templates/my-template-file.html template.html
 ```
+<!--/email_off-->
 
 ### Arguments
 
