@@ -1,7 +1,12 @@
 repository=$1
-shift
-script=$1
-shift
+file=$2
+if [[ -z "$repository" || -z "$file" ]]; then
+    echo "git/save script requires 2 arguments"
+    exit 1
+fi
+
+name=$3
+: ${name:="${file##*/}"}
 
 directory=$repository
 directory=${directory##*/}
@@ -11,4 +16,4 @@ directory=/var/tmp/repositories/${directory}
 
 [ -d "$directory" ] || git clone $repository $directory
 
-sh ${directory}/${script} $*
+cp ${directory}/${file} ./${name}
