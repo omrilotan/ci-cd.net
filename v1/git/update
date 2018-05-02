@@ -1,0 +1,11 @@
+commit=$(git log -1 --pretty=%h)
+message=$@
+: ${message:="$(curl -s whatthecommit.com/index.txt)"}
+git add .
+changes=$(git diff $commit)
+if [ -z "$changes" ]; then
+  exit 0
+fi
+git commit -m "$message"
+branch=$(git rev-parse --abbrev-ref HEAD)
+git push origin $branch --force-with-lease

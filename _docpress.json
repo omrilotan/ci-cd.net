@@ -1,0 +1,396 @@
+{
+  "toc": {
+    "sections": [
+      {
+        "title": "Hosted CI/CD scripts",
+        "source": "scripts/v1/index.md",
+        "url": "index.html",
+        "slug": "index",
+        "headings": [
+          {
+            "title": "Using hosted shell scripts",
+            "depth": 2,
+            "id": "using-hosted-shell-scripts"
+          }
+        ]
+      },
+      {
+        "title": "Scripts",
+        "sections": [
+          {
+            "title": "webhook",
+            "source": "scripts/v1/webhook.md",
+            "url": "v1/webhook.html",
+            "slug": "v1webhook",
+            "headings": [
+              {
+                "title": "Post (or Get) request to a webhook",
+                "depth": 2,
+                "id": "post-(or-get)-request-to-a-webhook",
+                "headings": [
+                  {
+                    "title": "Arguments",
+                    "depth": 3,
+                    "id": "arguments"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "title": "Git",
+            "sections": [
+              {
+                "title": "git/run",
+                "source": "scripts/v1/git/run.md",
+                "url": "v1/git/run.html",
+                "slug": "v1gitrun",
+                "headings": [
+                  {
+                    "title": "Run shell scripts right from a repository",
+                    "depth": 2,
+                    "id": "run-shell-scripts-right-from-a-repository",
+                    "headings": [
+                      {
+                        "title": "Arguments",
+                        "depth": 3,
+                        "id": "arguments"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "title": "git/cp",
+                "source": "scripts/v1/git/cp.md",
+                "url": "v1/git/cp.html",
+                "slug": "v1gitcp",
+                "headings": [
+                  {
+                    "title": "Copy a file right from a repository",
+                    "depth": 2,
+                    "id": "copy-a-file-right-from-a-repository",
+                    "headings": [
+                      {
+                        "title": "Arguments",
+                        "depth": 3,
+                        "id": "arguments"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "title": "git/user",
+                "source": "scripts/v1/git/user.md",
+                "url": "v1/git/user.html",
+                "slug": "v1gituser",
+                "headings": [
+                  {
+                    "title": "If missing, configure git user",
+                    "depth": 2,
+                    "id": "if-missing-configure-git-user",
+                    "headings": [
+                      {
+                        "title": "Arguments",
+                        "depth": 3,
+                        "id": "arguments"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "title": "git/update",
+                "source": "scripts/v1/git/update.md",
+                "url": "v1/git/update.html",
+                "slug": "v1gitupdate",
+                "headings": [
+                  {
+                    "title": "Commit changes if there are any changes to commit",
+                    "depth": 2,
+                    "id": "commit-changes-if-there-are-any-changes-to-commit",
+                    "headings": [
+                      {
+                        "title": "Arguments",
+                        "depth": 3,
+                        "id": "arguments"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "title": "git/changed",
+                "source": "scripts/v1/git/changed.md",
+                "url": "v1/git/changed.html",
+                "slug": "v1gitchanged",
+                "headings": [
+                  {
+                    "title": "Check if a file was changed in the last commit, returns \"yes\" or \"no\"",
+                    "depth": 2,
+                    "id": "check-if-a-file-was-changed-in-the-last-commit-returns-\"yes\"-or-\"no\"",
+                    "headings": [
+                      {
+                        "title": "Arguments",
+                        "depth": 3,
+                        "id": "arguments"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "title": "AWS",
+            "sections": [
+              {
+                "title": "aws/cp",
+                "source": "scripts/v1/aws/cp.md",
+                "url": "v1/aws/cp.html",
+                "slug": "v1awscp",
+                "headings": [
+                  {
+                    "title": "Upload files to AWS S3",
+                    "depth": 2,
+                    "id": "upload-files-to-aws-s3",
+                    "headings": [
+                      {
+                        "title": "Arguments",
+                        "depth": 3,
+                        "id": "arguments"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "title": "GitHub",
+            "sections": [
+              {
+                "title": "gh/pages",
+                "source": "scripts/v1/gh/pages.md",
+                "url": "v1/gh/pages.html",
+                "slug": "v1ghpages",
+                "headings": [
+                  {
+                    "title": "Commit a file or directory to gh-pages branch",
+                    "depth": 2,
+                    "id": "commit-a-file-or-directory-to-gh-pages-branch",
+                    "headings": [
+                      {
+                        "title": "Arguments",
+                        "depth": 3,
+                        "id": "arguments"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "index": {
+    "index.html": {
+      "source": "scripts/v1/index.md",
+      "title": "Hosted CI/CD scripts",
+      "pageTitle": "Hosted CI/CD scripts",
+      "slug": "index",
+      "headings": [
+        {
+          "title": "Using hosted shell scripts",
+          "depth": 2,
+          "id": "using-hosted-shell-scripts"
+        }
+      ]
+    },
+    "v1/webhook.html": {
+      "source": "scripts/v1/webhook.md",
+      "title": "webhook - Hosted CI/CD scripts",
+      "pageTitle": "webhook",
+      "slug": "v1webhook",
+      "headings": [
+        {
+          "title": "Post (or Get) request to a webhook",
+          "depth": 2,
+          "id": "post-(or-get)-request-to-a-webhook",
+          "headings": [
+            {
+              "title": "Arguments",
+              "depth": 3,
+              "id": "arguments"
+            }
+          ]
+        }
+      ]
+    },
+    "v1/git/run.html": {
+      "source": "scripts/v1/git/run.md",
+      "title": "git/run - Hosted CI/CD scripts",
+      "pageTitle": "git/run",
+      "slug": "v1gitrun",
+      "headings": [
+        {
+          "title": "Run shell scripts right from a repository",
+          "depth": 2,
+          "id": "run-shell-scripts-right-from-a-repository",
+          "headings": [
+            {
+              "title": "Arguments",
+              "depth": 3,
+              "id": "arguments"
+            }
+          ]
+        }
+      ]
+    },
+    "v1/git/cp.html": {
+      "source": "scripts/v1/git/cp.md",
+      "title": "git/cp - Hosted CI/CD scripts",
+      "pageTitle": "git/cp",
+      "slug": "v1gitcp",
+      "headings": [
+        {
+          "title": "Copy a file right from a repository",
+          "depth": 2,
+          "id": "copy-a-file-right-from-a-repository",
+          "headings": [
+            {
+              "title": "Arguments",
+              "depth": 3,
+              "id": "arguments"
+            }
+          ]
+        }
+      ]
+    },
+    "v1/git/user.html": {
+      "source": "scripts/v1/git/user.md",
+      "title": "git/user - Hosted CI/CD scripts",
+      "pageTitle": "git/user",
+      "slug": "v1gituser",
+      "headings": [
+        {
+          "title": "If missing, configure git user",
+          "depth": 2,
+          "id": "if-missing-configure-git-user",
+          "headings": [
+            {
+              "title": "Arguments",
+              "depth": 3,
+              "id": "arguments"
+            }
+          ]
+        }
+      ]
+    },
+    "v1/git/update.html": {
+      "source": "scripts/v1/git/update.md",
+      "title": "git/update - Hosted CI/CD scripts",
+      "pageTitle": "git/update",
+      "slug": "v1gitupdate",
+      "headings": [
+        {
+          "title": "Commit changes if there are any changes to commit",
+          "depth": 2,
+          "id": "commit-changes-if-there-are-any-changes-to-commit",
+          "headings": [
+            {
+              "title": "Arguments",
+              "depth": 3,
+              "id": "arguments"
+            }
+          ]
+        }
+      ]
+    },
+    "v1/git/changed.html": {
+      "source": "scripts/v1/git/changed.md",
+      "title": "git/changed - Hosted CI/CD scripts",
+      "pageTitle": "git/changed",
+      "slug": "v1gitchanged",
+      "headings": [
+        {
+          "title": "Check if a file was changed in the last commit, returns \"yes\" or \"no\"",
+          "depth": 2,
+          "id": "check-if-a-file-was-changed-in-the-last-commit-returns-\"yes\"-or-\"no\"",
+          "headings": [
+            {
+              "title": "Arguments",
+              "depth": 3,
+              "id": "arguments"
+            }
+          ]
+        }
+      ]
+    },
+    "v1/aws/cp.html": {
+      "source": "scripts/v1/aws/cp.md",
+      "title": "aws/cp - Hosted CI/CD scripts",
+      "pageTitle": "aws/cp",
+      "slug": "v1awscp",
+      "headings": [
+        {
+          "title": "Upload files to AWS S3",
+          "depth": 2,
+          "id": "upload-files-to-aws-s3",
+          "headings": [
+            {
+              "title": "Arguments",
+              "depth": 3,
+              "id": "arguments"
+            }
+          ]
+        }
+      ]
+    },
+    "v1/gh/pages.html": {
+      "source": "scripts/v1/gh/pages.md",
+      "title": "gh/pages - Hosted CI/CD scripts",
+      "pageTitle": "gh/pages",
+      "slug": "v1ghpages",
+      "headings": [
+        {
+          "title": "Commit a file or directory to gh-pages branch",
+          "depth": 2,
+          "id": "commit-a-file-or-directory-to-gh-pages-branch",
+          "headings": [
+            {
+              "title": "Arguments",
+              "depth": 3,
+              "id": "arguments"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "sources": {
+    "scripts/v1/index.md": "index.html",
+    "scripts/v1/webhook.md": "v1/webhook.html",
+    "scripts/v1/git/run.md": "v1/git/run.html",
+    "scripts/v1/git/cp.md": "v1/git/cp.html",
+    "scripts/v1/git/user.md": "v1/git/user.html",
+    "scripts/v1/git/update.md": "v1/git/update.html",
+    "scripts/v1/git/changed.md": "v1/git/changed.html",
+    "scripts/v1/aws/cp.md": "v1/aws/cp.html",
+    "scripts/v1/gh/pages.md": "v1/gh/pages.html",
+    "scripts/CNAME": "CNAME",
+    "scripts/favicon.ico": "favicon.ico",
+    "scripts/webhook.json": "webhook.json",
+    "scripts/v1/webhook": "v1/webhook",
+    "scripts/v1/aws/cp": "v1/aws/cp",
+    "scripts/v1/gh/pages": "v1/gh/pages",
+    "scripts/v1/git/changed": "v1/git/changed",
+    "scripts/v1/git/cp": "v1/git/cp",
+    "scripts/v1/git/run": "v1/git/run",
+    "scripts/v1/git/update": "v1/git/update",
+    "scripts/v1/git/user": "v1/git/user"
+  }
+}

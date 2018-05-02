@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="assets/style.css?t=615badd5">
+    <script src="assets/script.js?t=42463e55"></script>
+    <title>Hosted CI/CD scripts</title>
+    <meta name="viewport" content="width=device-width">
+  </head>
+  <body class="-menu-visible">
+    <div class="doc-layout">
+      <div class="toggle menu-toggle js-menu-toggle"></div>
+      <div class="menu toc-menu">
+        <li class="menu-item -level-0 -parent">
+          <ul class="submenu">
+            <li class="menu-item -level-1"><a class="link title -active link-index" href="index.html">Hosted CI/CD scripts</a>
+              <ul class="headings heading-list">
+                <li class="heading-item -depth-2"><a class="hlink link-using-hosted-shell-scripts" href="#using-hosted-shell-scripts">Using hosted shell scripts</a>
+                </li>
+              </ul>
+            </li>
+            <li class="menu-item -level-1 -parent"><span class="title">Scripts</span>
+              <ul class="submenu">
+                <li class="menu-item -level-2"><a class="link title  link-v1webhook" href="v1/webhook.html">webhook</a>
+                </li>
+                <li class="menu-item -level-2 -parent"><span class="title">Git</span>
+                  <ul class="submenu">
+                    <li class="menu-item -level-3"><a class="link title  link-v1gitrun" href="v1/git/run.html">git/run</a>
+                    </li>
+                    <li class="menu-item -level-3"><a class="link title  link-v1gitcp" href="v1/git/cp.html">git/cp</a>
+                    </li>
+                    <li class="menu-item -level-3"><a class="link title  link-v1gituser" href="v1/git/user.html">git/user</a>
+                    </li>
+                    <li class="menu-item -level-3"><a class="link title  link-v1gitupdate" href="v1/git/update.html">git/update</a>
+                    </li>
+                    <li class="menu-item -level-3"><a class="link title  link-v1gitchanged" href="v1/git/changed.html">git/changed</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="menu-item -level-2 -parent"><span class="title">AWS</span>
+                  <ul class="submenu">
+                    <li class="menu-item -level-3"><a class="link title  link-v1awscp" href="v1/aws/cp.html">aws/cp</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="menu-item -level-2 -parent"><span class="title">GitHub</span>
+                  <ul class="submenu">
+                    <li class="menu-item -level-3"><a class="link title  link-v1ghpages" href="v1/gh/pages.html">gh/pages</a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </div>
+      <div class="body page-index">
+        <div class="header-nav">
+          <div class="right"><a class="iconlink" href="https://github.com/omrilotan/ci-cd.net" data-title="omrilotan/ci-cd.net">
+              <!-- span.title Open in GitHub--><span class="icon -github"></span></a>
+          </div>
+        </div>
+        <div class="markdown-body"><h1 id="hosted-cicd-scripts">Hosted CI/CD scripts</h1>
+<p>A collection of hosted CI-CD generic helper scripts, which aim to streamline continues integration and delivery processes across services. This project&apos;s goal is to include non business logic scripts which can be used out-of-the-box or adapted by arguments.</p>
+<h2 id="using-hosted-shell-scripts">Using hosted shell scripts</h2>
+<p>Using a script with defaults</p>
+<pre><code>curl ci-cd.net/v1/&lt;SCRIPT&gt; | sh
+</code></pre>
+<p>Passing arguments</p>
+<pre><code class="lang-bash">curl ci-cd.net/v1/&lt;SCRIPT&gt; | sh <span class="hljs-_">-s</span> &lt;ARGUMENT_1&gt; &lt;ARGUMENT_2&gt;
+</code></pre>
+<p><img src="https://user-images.githubusercontent.com/516342/38782871-e15e426e-4102-11e8-9483-6af44f9faef7.png" alt=""></p>
+
+        </div>
+        <div class="footer-nav">
+          <div class="right"><a href="v1/webhook.html"><span class="label">Next: </span><span class="title">webhook</span></a></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

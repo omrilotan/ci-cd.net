@@ -1,0 +1,14 @@
+repository=$1
+shift
+script=$1
+shift
+
+directory=$repository
+directory=${directory##*/}
+directory=${directory%.*}
+mkdir -p /var/tmp/repositories/
+directory=/var/tmp/repositories/${directory}
+
+[ -d "$directory" ] || git clone $repository $directory
+
+sh ${directory}/${script} $*
