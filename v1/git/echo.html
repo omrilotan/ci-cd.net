@@ -109,7 +109,7 @@ aws_secret_access_key = <span class="hljs-variable">${AWS_SECRET}</span>
 </code></pre>
 <h3 id="ci-script">CI script</h3>
 <pre><code class="lang-sh">  - mkdir -p ~/.aws
-  - curl ci-cd.net/v1/git/<span class="pl-c1">echo</span> | sh <span class="hljs-_">-s</span> git@github.com:user/repo.git templates/aws_cred | sh &gt; ~/.aws/credentials
+  - curl ci-cd.net/v1/git/<span class="pl-c1">echo</span> | sh <span class="hljs-_">-s</span> git@github.com:user/repo.git templates/aws_cred &gt; ~/.aws/credentials
 </code></pre>
 
         </div>
