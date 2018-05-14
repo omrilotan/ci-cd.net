@@ -1,12 +1,9 @@
 repository=$1
 file=$2
 if [[ -z "$repository" || -z "$file" ]]; then
-    echo "git/cp script requires 2 arguments"
+    echo "git/echo script requires 2 arguments"
     exit 1
 fi
-
-name=$3
-: ${name:="${file##*/}"}
 
 directory=$repository
 directory=${directory##*/}
@@ -16,4 +13,4 @@ directory=/var/tmp/repositories/${directory}
 
 [ -d "$directory" ] || git clone $repository $directory
 
-cp ${directory}/${file} ./${name}
+(echo "cat <<EOF"; cat ${directory}/${file}; echo EOF) | sh
