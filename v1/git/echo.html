@@ -27,13 +27,11 @@
                     </li>
                     <li class="menu-item -level-3"><a class="link title -active link-v1gitecho" href="../../v1/git/echo.html">git/echo</a>
                       <ul class="headings heading-list">
-                        <li class="heading-item -depth-2"><a class="hlink link-echos-a-file's-content-right-from-a-repository.-parses-through-bash-so-environment-variables-or-shell-snippets-will-get-parsed." href="#echos-a-file's-content-right-from-a-repository.-parses-through-bash-so-environment-variables-or-shell-snippets-will-get-parsed.">Echos a file's content right from a repository. Parses through bash so, environment variables or shell snippets will get parsed.</a>
+                        <li class="heading-item -depth-2"><a class="hlink link-echos-a-file's-content-right-from-a-repository." href="#echos-a-file's-content-right-from-a-repository.">Echos a file's content right from a repository.</a>
                           <ul class="heading-list -depth-2">
                             <li class="heading-item -depth-3"><a class="hlink link-arguments" href="#arguments">Arguments</a>
                             </li>
-                            <li class="heading-item -depth-3"><a class="hlink link-example:" href="#example:">example:</a>
-                            </li>
-                            <li class="heading-item -depth-3"><a class="hlink link-ci-script" href="#ci-script">CI script</a>
+                            <li class="heading-item -depth-3"><a class="hlink link-example" href="#example">Example</a>
                             </li>
                           </ul>
                         </li>
@@ -71,7 +69,8 @@
           </div>
         </div>
         <div class="markdown-body"><h1 id="gitecho">git/echo</h1>
-<h2 id="echos-a-file&apos;s-content-right-from-a-repository.-parses-through-bash-so-environment-variables-or-shell-snippets-will-get-parsed.">Echos a file&apos;s content right from a repository. Parses through bash so, environment variables or shell snippets will get parsed.</h2>
+<h2 id="echos-a-file&apos;s-content-right-from-a-repository.">Echos a file&apos;s content right from a repository.</h2>
+<p>The script parses through bash so, environment variables or shell snippets will get parsed.</p>
 <!--email_off-->
 <pre><code class="lang-sh">curl ci-cd.net/v1/git/<span class="pl-c1">echo</span> | sh <span class="hljs-_">-s</span> git@github.com:user/repo.git templates/my-template-file | sh &gt; template-output.txt
 </code></pre>
@@ -101,13 +100,13 @@
 </tr>
 </tbody>
 </table>
-<h3 id="example:">example:</h3>
-<h4 id="template-file">Template file</h4>
+<h3 id="example">Example</h3>
+<p><strong>Template file</strong></p>
 <pre><code class="lang-sh">[default]
 aws_access_key_id = <span class="hljs-variable">${AWS_SECRET}</span>
 aws_secret_access_key = <span class="hljs-variable">${AWS_SECRET}</span>
 </code></pre>
-<h3 id="ci-script">CI script</h3>
+<p><strong>CI script</strong></p>
 <pre><code class="lang-sh">  - mkdir -p ~/.aws
   - curl ci-cd.net/v1/git/<span class="pl-c1">echo</span> | sh <span class="hljs-_">-s</span> git@github.com:user/repo.git templates/aws_cred &gt; ~/.aws/credentials
 </code></pre>

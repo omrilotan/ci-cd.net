@@ -87,9 +87,9 @@
                 "slug": "v1gitecho",
                 "headings": [
                   {
-                    "title": "Echos a file's content right from a repository. Parses through bash so, environment variables or shell snippets will get parsed.",
+                    "title": "Echos a file's content right from a repository.",
                     "depth": 2,
-                    "id": "echos-a-file's-content-right-from-a-repository.-parses-through-bash-so-environment-variables-or-shell-snippets-will-get-parsed.",
+                    "id": "echos-a-file's-content-right-from-a-repository.",
                     "headings": [
                       {
                         "title": "Arguments",
@@ -97,14 +97,9 @@
                         "id": "arguments"
                       },
                       {
-                        "title": "example:",
+                        "title": "Example",
                         "depth": 3,
-                        "id": "example:"
-                      },
-                      {
-                        "title": "CI script",
-                        "depth": 3,
-                        "id": "ci-script"
+                        "id": "example"
                       }
                     ]
                   }
@@ -307,9 +302,9 @@
       "slug": "v1gitecho",
       "headings": [
         {
-          "title": "Echos a file's content right from a repository. Parses through bash so, environment variables or shell snippets will get parsed.",
+          "title": "Echos a file's content right from a repository.",
           "depth": 2,
-          "id": "echos-a-file's-content-right-from-a-repository.-parses-through-bash-so-environment-variables-or-shell-snippets-will-get-parsed.",
+          "id": "echos-a-file's-content-right-from-a-repository.",
           "headings": [
             {
               "title": "Arguments",
@@ -317,14 +312,9 @@
               "id": "arguments"
             },
             {
-              "title": "example:",
+              "title": "Example",
               "depth": 3,
-              "id": "example:"
-            },
-            {
-              "title": "CI script",
-              "depth": 3,
-              "id": "ci-script"
+              "id": "example"
             }
           ]
         }
