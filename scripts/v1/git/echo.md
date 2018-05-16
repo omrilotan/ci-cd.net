@@ -1,7 +1,7 @@
 # git/echo
 
 ## Echos a file's content right from a repository.
-[`[source]`](https://github.com/omrilotan/ci-cd.net/blob/master/scripts/v1/git/echo)
+[`source`](https://github.com/omrilotan/ci-cd.net/blob/master/scripts/v1/git/echo)
 
 The script parses through bash so, environment variables or shell snippets will get parsed.
 

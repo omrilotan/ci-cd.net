@@ -1,7 +1,7 @@
 # git/run
 
 ## Run shell scripts right from a repository
-[`[source]`](https://github.com/omrilotan/ci-cd.net/blob/master/scripts/v1/git/run)
+[`source`](https://github.com/omrilotan/ci-cd.net/blob/master/scripts/v1/git/run)
 
 <!--email_off-->
 ```sh

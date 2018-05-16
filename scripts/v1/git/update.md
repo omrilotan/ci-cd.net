@@ -2,7 +2,7 @@
 
 ## Commit changes if there are any changes to commit
 Then commit them upstream.
-[`[source]`](https://github.com/omrilotan/ci-cd.net/blob/master/scripts/v1/git/update)
+[`source`](https://github.com/omrilotan/ci-cd.net/blob/master/scripts/v1/git/update)
 
 ```sh
 curl ci-cd.net/v1/git/update | bash -s All your codebase are belong to us

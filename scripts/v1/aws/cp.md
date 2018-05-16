@@ -1,7 +1,7 @@
 # aws/cp
 
 ## Upload files to AWS S3
-[`[source]`](https://github.com/omrilotan/ci-cd.net/blob/master/scripts/v1/aws/cp)
+[`source`](https://github.com/omrilotan/ci-cd.net/blob/master/scripts/v1/aws/cp)
 
 ```sh
 curl ci-cd.net/v1/aws/cp | bash -s docs/ s3://docs.website.com/ *.log

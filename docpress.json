@@ -1,5 +1,8 @@
 {
   "docs": "scripts",
   "dist": "gh-pages",
-  "github": "omrilotan/ci-cd.net"
+  "github": "omrilotan/ci-cd.net",
+  "css": [
+    "styles.css"
+  ]
 }
