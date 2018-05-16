@@ -19,7 +19,7 @@
               <ul class="submenu">
                 <li class="menu-item -level-2"><a class="link title -active link-v1webhook" href="../v1/webhook.html">webhook</a>
                   <ul class="headings heading-list">
-                    <li class="heading-item -depth-2"><a class="hlink link-post-(or-get)-request-to-a-webhook" href="#post-(or-get)-request-to-a-webhook">Post (or Get) request to a webhook</a>
+                    <li class="heading-item -depth-2"><a class="hlink link-post-(or-get)-request-to-a-webhook-lesssmallgreatersourcelesssmallgreater(https:github.comomrilotanci-cd.netblobmasterscriptsv1webhook)" href="#post-(or-get)-request-to-a-webhook-lesssmallgreatersourcelesssmallgreater(https:github.comomrilotanci-cd.netblobmasterscriptsv1webhook)">Post (or Get) request to a webhook [&lt;small&gt;`[source]`&lt;/small&gt;](https://github.com/omrilotan/ci-cd.net/blob/master/scripts/v1/webhook)</a>
                       <ul class="heading-list -depth-2">
                         <li class="heading-item -depth-3"><a class="hlink link-arguments" href="#arguments">Arguments</a>
                         </li>
@@ -67,8 +67,7 @@
           </div>
         </div>
         <div class="markdown-body"><h1 id="webhook">webhook</h1>
-<h2 id="post-(or-get)-request-to-a-webhook">Post (or Get) request to a webhook</h2>
-<p><a href="https://github.com/omrilotan/ci-cd.net/blob/master/scripts/v1/webhook"><code>[source]</code></a></p>
+<h2 id="post-(or-get)-request-to-a-webhook-source">Post (or Get) request to a webhook <a href="https://github.com/omrilotan/ci-cd.net/blob/master/scripts/v1/webhook"><small><code>[source]</code></small></a></h2>
 <p>The webhook will execute a POST a JSON file to the specified address, or a GET request when no JSON file is found. It will use the shell to &quot;process&quot; the JSON file, so any environment variables included in the text will be transformed.</p>
 <pre><code class="lang-sh">curl ci-cd.net/v1/webhook | sh <span class="hljs-_">-s</span> <span class="hljs-variable">$MY_WEBHOOK</span> ./.custom-webhook-message.json
 </code></pre>
