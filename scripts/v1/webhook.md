@@ -1,6 +1,8 @@
 # webhook
 
 ## Post (or Get) request to a webhook
+[`[source]`](https://github.com/omrilotan/ci-cd.net/blob/master/scripts/v1/webhook)
+
 The webhook will execute a POST a JSON file to the specified address, or a GET request when no JSON file is found. It will use the shell to "process" the JSON file, so any environment variables included in the text will be transformed.
 
 ```sh

@@ -1,6 +1,7 @@
 # git/user
 
 ## If missing, configure git user
+[`[source]`](https://github.com/omrilotan/ci-cd.net/blob/master/scripts/v1/git/user)
 
 <!--email_off-->
 ```sh

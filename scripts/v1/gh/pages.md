@@ -1,6 +1,7 @@
 # gh/pages
 
 ## Commit a file or directory to gh-pages branch
+[`[source]`](https://github.com/omrilotan/ci-cd.net/blob/master/scripts/v1/gh/pages)
 
 ```sh
 npx jsdoc docs/ -c .jsdocrc.json # Create docs for example
