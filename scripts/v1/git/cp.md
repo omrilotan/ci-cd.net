@@ -5,7 +5,7 @@
 
 <!--email_off-->
 ```sh
-curl ci-cd.net/v1/git/cp | sh -s git@github.com:user/repo.git templates/my-template-file.html template.html
+curl ci-cd.net/v1/git/cp | bash -s git@github.com:user/repo.git templates/my-template-file.html template.html
 ```
 <!--/email_off-->
 

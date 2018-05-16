@@ -5,7 +5,7 @@
 
 ```sh
 npx jsdoc docs/ -c .jsdocrc.json # Create docs for example
-curl ci-cd.net/v1/gh/pages | sh -s docs/.
+curl ci-cd.net/v1/gh/pages | bash -s docs/.
 ```
 
 ### Arguments

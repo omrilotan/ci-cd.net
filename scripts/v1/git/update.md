@@ -5,7 +5,7 @@ Then commit them upstream.
 [`[source]`](https://github.com/omrilotan/ci-cd.net/blob/master/scripts/v1/git/update)
 
 ```sh
-curl ci-cd.net/v1/git/update | sh -s All your codebase are belong to us
+curl ci-cd.net/v1/git/update | bash -s All your codebase are belong to us
 ```
 
 <img width="624" alt="image" src="https://user-images.githubusercontent.com/516342/37645734-5cad4f7e-2c30-11e8-99ee-5d4462ee606b.png">

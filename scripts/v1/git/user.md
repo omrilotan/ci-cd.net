@@ -5,7 +5,7 @@
 
 <!--email_off-->
 ```sh
-curl ci-cd.net/v1/git/user | sh -s CI-CD ci-cd@gmail.com
+curl ci-cd.net/v1/git/user | bash -s CI-CD ci-cd@gmail.com
 ```
 <!--/email_off-->
 

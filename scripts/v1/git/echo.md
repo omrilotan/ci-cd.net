@@ -7,7 +7,7 @@ The script parses through bash so, environment variables or shell snippets will 
 
 <!--email_off-->
 ```sh
-curl ci-cd.net/v1/git/echo | sh -s git@github.com:user/repo.git templates/my-template-file | sh > template-output.txt
+curl ci-cd.net/v1/git/echo | bash -s git@github.com:user/repo.git templates/my-template-file > template-output.txt
 ```
 <!--/email_off-->
 

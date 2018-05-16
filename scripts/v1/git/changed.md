@@ -4,7 +4,7 @@
 [`[source]`](https://github.com/omrilotan/ci-cd.net/blob/master/scripts/v1/git/changed)
 
 ```sh
-[ $(curl ci-cd.net/v1/git/changed | sh -s .version) == "yes" ] && echo "Version was changed"
+[ $(curl ci-cd.net/v1/git/changed | bash -s .version) == "yes" ] && echo "Version was changed"
 ```
 
 ### Arguments

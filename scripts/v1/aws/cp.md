@@ -4,7 +4,7 @@
 [`[source]`](https://github.com/omrilotan/ci-cd.net/blob/master/scripts/v1/aws/cp)
 
 ```sh
-curl ci-cd.net/v1/aws/cp | sh -s docs/ s3://docs.website.com/ *.log
+curl ci-cd.net/v1/aws/cp | bash -s docs/ s3://docs.website.com/ *.log
 ```
 
 Upload file structure to S3 (recursive). Uses awscli (via pip).
