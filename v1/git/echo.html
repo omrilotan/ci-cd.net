@@ -73,7 +73,7 @@
 <p><a href="https://github.com/omrilotan/ci-cd.net/blob/master/scripts/v1/git/echo"><code>[source]</code></a></p>
 <p>The script parses through bash so, environment variables or shell snippets will get parsed.</p>
 <!--email_off-->
-<pre><code class="lang-sh">curl ci-cd.net/v1/git/<span class="pl-c1">echo</span> | sh <span class="hljs-_">-s</span> git@github.com:user/repo.git templates/my-template-file | sh &gt; template-output.txt
+<pre><code class="lang-sh">curl ci-cd.net/v1/git/<span class="pl-c1">echo</span> | bash <span class="hljs-_">-s</span> git@github.com:user/repo.git templates/my-template-file &gt; template-output.txt
 </code></pre>
 <!--/email_off-->
 <h3 id="arguments">Arguments</h3>
