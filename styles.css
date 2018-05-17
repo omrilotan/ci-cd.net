@@ -1,0 +1,8 @@
+body{font:100 100%/1.4 -apple-system, "BlinkMacSystemFont", "Helvetica Neue", "Helvetica", "Lucida Grande", "Arial", sans-serif}
+.markdown-body h1,.markdown-body h2,.markdown-body h3,.markdown-body h4{font-weight:100}
+.markdown-body strong{font-weight:200;color:#000}
+.heading-list{display:none}
+.toc-menu .link,.toc-menu .hlink{transition:none}
+.toc-menu .link,.toc-menu .link:visited{color:#999}
+a.-notactive{color:#000 !important}
+.markdown-body a code{border:1px solid #4078c0;font-size:.7em}

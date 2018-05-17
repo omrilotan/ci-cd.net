@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="assets/style.css?t=615badd5">
+    <link rel="stylesheet" href="styles.css?t=1fbc2c18">
     <script src="assets/script.js?t=42463e55"></script>
     <title>Hosted CI/CD scripts</title>
     <meta name="viewport" content="width=device-width">
@@ -66,10 +67,10 @@
 <p>A collection of hosted CI-CD generic helper scripts, which aim to streamline continues integration and delivery processes across services. This project&apos;s goal is to include non business logic scripts which can be used out-of-the-box or adapted by arguments.</p>
 <h2 id="using-hosted-shell-scripts">Using hosted shell scripts</h2>
 <p>Using a script with defaults</p>
-<pre><code>curl ci-cd.net/v1/&lt;SCRIPT&gt; | sh
+<pre><code>curl ci-cd.net/v1/&lt;SCRIPT&gt; | bash
 </code></pre>
 <p>Passing arguments</p>
-<pre><code class="lang-bash">curl ci-cd.net/v1/&lt;SCRIPT&gt; | sh <span class="hljs-_">-s</span> &lt;ARGUMENT_1&gt; &lt;ARGUMENT_2&gt;
+<pre><code class="lang-bash">curl ci-cd.net/v1/&lt;SCRIPT&gt; | bash <span class="hljs-_">-s</span> &lt;ARGUMENT_1&gt; &lt;ARGUMENT_2&gt;
 </code></pre>
 <p><img src="https://user-images.githubusercontent.com/516342/38782871-e15e426e-4102-11e8-9483-6af44f9faef7.png" alt=""></p>
 

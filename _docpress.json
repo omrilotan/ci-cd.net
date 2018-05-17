@@ -434,6 +434,7 @@
     "scripts/v1/gh/pages.md": "v1/gh/pages.html",
     "scripts/CNAME": "CNAME",
     "scripts/favicon.ico": "favicon.ico",
+    "scripts/styles.css": "styles.css",
     "scripts/webhook.json": "webhook.json",
     "scripts/v1/webhook": "v1/webhook",
     "scripts/v1/aws/cp": "v1/aws/cp",
