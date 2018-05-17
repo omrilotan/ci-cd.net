@@ -7,10 +7,10 @@ A collection of hosted CI-CD generic helper scripts, which aim to streamline con
 ## Using hosted shell scripts
 Using a script with defaults
 ```
-curl ci-cd.net/v1/<SCRIPT> | sh
+curl ci-cd.net/v1/<SCRIPT> | bash
 ```
 
 Passing arguments
 ```bash
-curl ci-cd.net/v1/<SCRIPT> | sh -s <ARGUMENT_1> <ARGUMENT_2>
+curl ci-cd.net/v1/<SCRIPT> | bash -s <ARGUMENT_1> <ARGUMENT_2>
 ```
