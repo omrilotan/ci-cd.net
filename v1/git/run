@@ -11,4 +11,4 @@ directory=/var/tmp/repositories/${directory}
 
 [ -d "$directory" ] || git clone $repository $directory
 
-sh ${directory}/${script} $*
+bash ${directory}/${script} $*
