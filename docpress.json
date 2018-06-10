@@ -4,5 +4,8 @@
   "github": "omrilotan/ci-cd.net",
   "css": [
     "styles.css"
+  ],
+  "scripts": [
+    "script.js"
   ]
 }

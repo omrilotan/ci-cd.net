@@ -6,11 +6,16 @@ A collection of hosted CI-CD generic helper scripts, which aim to streamline con
 
 ## Using hosted shell scripts
 Using a script with defaults
-```
+```bash
 curl ci-cd.net/v1/<SCRIPT> | bash
 ```
 
 Passing arguments
 ```bash
 curl ci-cd.net/v1/<SCRIPT> | bash -s <ARGUMENT_1> <ARGUMENT_2>
+```
+
+Use SSL
+```bash
+curl -v https://ci-cd.net/v1/<SCRIPT> | bash
 ```
