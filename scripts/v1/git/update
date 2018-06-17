@@ -6,6 +6,10 @@ changes=$(git diff $commit)
 if [ -z "$changes" ]; then
   exit 0
 fi
+
+[ -z $(git config user.name) ] && git config --global user.name $(git log -1 --pretty=%an)
+[ -z $(git config user.email) ] && git config --global user.email $(git log -1 --pretty=%ae)
+
 git commit -m "$message"
 branch=$(git rev-parse --abbrev-ref HEAD)
 git push origin $branch --force-with-lease
