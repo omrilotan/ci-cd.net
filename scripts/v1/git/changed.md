@@ -12,3 +12,5 @@
 | # | Role | Default | Optionality
 | --- | --- | --- | ---
 | 1 | file name | none | Mandatory
+
+> Git compares the complete file names, so, for example the file "pkg/program.go" will only match the string `"pkg/program.go"` (`"./pkg/program.go"` and `"program.go"` will not match)

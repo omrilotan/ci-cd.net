@@ -17,4 +17,4 @@ curl ci-cd.net/v1/git/update | bash -s All your codebase are belong to us
 | --- | --- | --- | ---
 | @ | commit message | random commit message | Optional
 
-> This operation requires the environment holds push privileges, and a user has been configured (see [git/user](#gituser))
+> This operation requires the environment to have push privileges
