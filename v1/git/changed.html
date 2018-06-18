@@ -71,7 +71,7 @@
         <div class="markdown-body"><h1 id="gitchanged">git/changed</h1>
 <h2 id="check-if-a-file-was-changed-in-the-last-commit-returns-&quot;yes&quot;-or-&quot;no&quot;">Check if a file was changed in the last commit, returns &quot;yes&quot; or &quot;no&quot;</h2>
 <p><a href="https://github.com/omrilotan/ci-cd.net/blob/master/scripts/v1/git/changed"><code>source</code></a></p>
-<pre><code class="lang-sh">[ $(curl ci-cd.net/v1/git/changed | bash <span class="hljs-_">-s</span> .version) == <span class="pl-s">&quot;yes&quot;</span> ] &amp;&amp; <span class="pl-c1">echo</span> <span class="pl-s">&quot;Version was changed&quot;</span>
+<pre><code class="lang-sh"><span class="pl-c1">echo</span> $(curl ci-cd.net/v1/git/changed | bash <span class="hljs-_">-s</span> .version) | grep -q <span class="pl-s">&quot;yes&quot;</span> &amp;&amp; <span class="pl-c1">echo</span> <span class="pl-s">&quot;Version was changed&quot;</span>
 </code></pre>
 <h3 id="arguments">Arguments</h3>
 <table>
