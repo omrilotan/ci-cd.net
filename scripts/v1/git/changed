@@ -4,7 +4,7 @@ if [[ -z "$filename" ]]; then
     exit 1
 fi
 
-last_two=$(git log --format="%h" -n2)
+last_two=$(git log --format="%h" -n1)
 previous=${last_two##*$'\n'}
 
 matches=$(git diff-tree --no-commit-id --name-only -r $previous | grep -Fcx $filename)
