@@ -11,4 +11,5 @@
 	* AWS
 		* [aws/cp](./v1/aws/cp.md)
 	* GitHub
+		* [gh/pr](./v1/gh/pr.md)
 		* [gh/pages](./v1/gh/pages.md)
