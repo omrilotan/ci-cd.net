@@ -196,6 +196,26 @@
             "title": "GitHub",
             "sections": [
               {
+                "title": "gh/pr",
+                "source": "scripts/v1/gh/pr.md",
+                "url": "v1/gh/pr.html",
+                "slug": "v1ghpr",
+                "headings": [
+                  {
+                    "title": "Create a Pull Request on GitHub",
+                    "depth": 2,
+                    "id": "create-a-pull-request-on-github",
+                    "headings": [
+                      {
+                        "title": "Arguments",
+                        "depth": 3,
+                        "id": "arguments"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
                 "title": "gh/pages",
                 "source": "scripts/v1/gh/pages.md",
                 "url": "v1/gh/pages.html",
@@ -400,6 +420,26 @@
         }
       ]
     },
+    "v1/gh/pr.html": {
+      "source": "scripts/v1/gh/pr.md",
+      "title": "gh/pr - Hosted CI/CD scripts",
+      "pageTitle": "gh/pr",
+      "slug": "v1ghpr",
+      "headings": [
+        {
+          "title": "Create a Pull Request on GitHub",
+          "depth": 2,
+          "id": "create-a-pull-request-on-github",
+          "headings": [
+            {
+              "title": "Arguments",
+              "depth": 3,
+              "id": "arguments"
+            }
+          ]
+        }
+      ]
+    },
     "v1/gh/pages.html": {
       "source": "scripts/v1/gh/pages.md",
       "title": "gh/pages - Hosted CI/CD scripts",
@@ -431,6 +471,7 @@
     "scripts/v1/git/update.md": "v1/git/update.html",
     "scripts/v1/git/changed.md": "v1/git/changed.html",
     "scripts/v1/aws/cp.md": "v1/aws/cp.html",
+    "scripts/v1/gh/pr.md": "v1/gh/pr.html",
     "scripts/v1/gh/pages.md": "v1/gh/pages.html",
     "scripts/CNAME": "CNAME",
     "scripts/favicon.ico": "favicon.ico",
@@ -440,6 +481,7 @@
     "scripts/v1/webhook": "v1/webhook",
     "scripts/v1/aws/cp": "v1/aws/cp",
     "scripts/v1/gh/pages": "v1/gh/pages",
+    "scripts/v1/gh/pr": "v1/gh/pr",
     "scripts/v1/git/changed": "v1/git/changed",
     "scripts/v1/git/cp": "v1/git/cp",
     "scripts/v1/git/echo": "v1/git/echo",
