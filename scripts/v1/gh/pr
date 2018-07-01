@@ -1,0 +1,26 @@
+token=$1
+if [ -z "$token" ]; then
+    echo "token was not suplied"
+    exit 1;
+fi
+
+regexp="^(https|git)(:\/\/|@)([^\/:]+)[\/:]([^\/:]+)\/(.+).git$"
+url=$(git config --get remote.origin.url)
+if [[ $url =~ $regexp ]]; then
+  # protocol=${BASH_REMATCH[1]}
+  # separator=${BASH_REMATCH[2]}
+  # hostname=${BASH_REMATCH[3]}
+  user=${BASH_REMATCH[4]}
+  repo=${BASH_REMATCH[5]}
+fi
+
+title=$(git show -s --format=%s)
+body=$(git show -s --format=%B)
+body=${body//$'\n'/'\n'} # Replace linebreaks
+branch=$(git rev-parse --abbrev-ref HEAD)
+
+curl -i \
+     -H "Accept: application/json" \
+     -H "Authorization: token ${token}" \
+     -X POST -d "{\"title\":\"${title}\",\"body\":\"${body}\",\"head\":\"refs/heads/${branch}\",\"base\":\"master\"}" \
+     https://api.github.com/repos/${user}/${repo}/pulls
