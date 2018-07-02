@@ -168,31 +168,6 @@
             ]
           },
           {
-            "title": "AWS",
-            "sections": [
-              {
-                "title": "aws/cp",
-                "source": "scripts/v1/aws/cp.md",
-                "url": "v1/aws/cp.html",
-                "slug": "v1awscp",
-                "headings": [
-                  {
-                    "title": "Upload files to AWS S3",
-                    "depth": 2,
-                    "id": "upload-files-to-aws-s3",
-                    "headings": [
-                      {
-                        "title": "Arguments",
-                        "depth": 3,
-                        "id": "arguments"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ]
-          },
-          {
             "title": "GitHub",
             "sections": [
               {
@@ -225,6 +200,31 @@
                     "title": "Commit a file or directory to gh-pages branch",
                     "depth": 2,
                     "id": "commit-a-file-or-directory-to-gh-pages-branch",
+                    "headings": [
+                      {
+                        "title": "Arguments",
+                        "depth": 3,
+                        "id": "arguments"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "title": "AWS",
+            "sections": [
+              {
+                "title": "aws/cp",
+                "source": "scripts/v1/aws/cp.md",
+                "url": "v1/aws/cp.html",
+                "slug": "v1awscp",
+                "headings": [
+                  {
+                    "title": "Upload files to AWS S3",
+                    "depth": 2,
+                    "id": "upload-files-to-aws-s3",
                     "headings": [
                       {
                         "title": "Arguments",
@@ -400,26 +400,6 @@
         }
       ]
     },
-    "v1/aws/cp.html": {
-      "source": "scripts/v1/aws/cp.md",
-      "title": "aws/cp - Hosted CI/CD scripts",
-      "pageTitle": "aws/cp",
-      "slug": "v1awscp",
-      "headings": [
-        {
-          "title": "Upload files to AWS S3",
-          "depth": 2,
-          "id": "upload-files-to-aws-s3",
-          "headings": [
-            {
-              "title": "Arguments",
-              "depth": 3,
-              "id": "arguments"
-            }
-          ]
-        }
-      ]
-    },
     "v1/gh/pr.html": {
       "source": "scripts/v1/gh/pr.md",
       "title": "gh/pr - Hosted CI/CD scripts",
@@ -459,6 +439,26 @@
           ]
         }
       ]
+    },
+    "v1/aws/cp.html": {
+      "source": "scripts/v1/aws/cp.md",
+      "title": "aws/cp - Hosted CI/CD scripts",
+      "pageTitle": "aws/cp",
+      "slug": "v1awscp",
+      "headings": [
+        {
+          "title": "Upload files to AWS S3",
+          "depth": 2,
+          "id": "upload-files-to-aws-s3",
+          "headings": [
+            {
+              "title": "Arguments",
+              "depth": 3,
+              "id": "arguments"
+            }
+          ]
+        }
+      ]
     }
   },
   "sources": {
@@ -470,9 +470,9 @@
     "scripts/v1/git/user.md": "v1/git/user.html",
     "scripts/v1/git/update.md": "v1/git/update.html",
     "scripts/v1/git/changed.md": "v1/git/changed.html",
-    "scripts/v1/aws/cp.md": "v1/aws/cp.html",
     "scripts/v1/gh/pr.md": "v1/gh/pr.html",
     "scripts/v1/gh/pages.md": "v1/gh/pages.html",
+    "scripts/v1/aws/cp.md": "v1/aws/cp.html",
     "scripts/CNAME": "CNAME",
     "scripts/favicon.ico": "favicon.ico",
     "scripts/script.js": "script.js",
