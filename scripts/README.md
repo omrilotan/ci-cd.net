@@ -8,8 +8,8 @@
 		* [git/user](./v1/git/user.md)
 		* [git/update](./v1/git/update.md)
 		* [git/changed](./v1/git/changed.md)
-	* AWS
-		* [aws/cp](./v1/aws/cp.md)
 	* GitHub
 		* [gh/pr](./v1/gh/pr.md)
 		* [gh/pages](./v1/gh/pages.md)
+	* AWS
+		* [aws/cp](./v1/aws/cp.md)
