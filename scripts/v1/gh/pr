@@ -1,6 +1,6 @@
 token=$1
 if [ -z "$token" ]; then
-    echo "token was not suplied"
+    echo "token was not supplied"
     exit 1;
 fi
 
