@@ -6,6 +6,8 @@ fi
 
 message=$2
 : ${message:="$(curl -s whatthecommit.com/index.txt)"}
+[ -z $(git config user.name) ] && git config --global user.name $(git log -1 --pretty=%an)
+[ -z $(git config user.email) ] && git config --global user.email $(git log -1 --pretty=%ae)
 
 origin=$(git config --get remote.origin.url)
 git clone -b gh-pages --single-branch $origin GHPAGES_DIR
