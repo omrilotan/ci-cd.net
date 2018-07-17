@@ -473,6 +473,7 @@
     "scripts/v1/gh/pr.md": "v1/gh/pr.html",
     "scripts/v1/gh/pages.md": "v1/gh/pages.html",
     "scripts/v1/aws/cp.md": "v1/aws/cp.html",
+    "scripts/404.html": "404.html",
     "scripts/CNAME": "CNAME",
     "scripts/favicon.ico": "favicon.ico",
     "scripts/script.js": "script.js",
