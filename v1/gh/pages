@@ -13,7 +13,7 @@ origin=$(git config --get remote.origin.url)
 
 exists=$(git ls-remote --heads ${origin} gh-pages)
 
-if [ -z "$exists"]; then
+if [ -z "$exists" ]; then
 	mkdir -p GHPAGES_DIR
 	cp -r .git GHPAGES_DIR
 	cd GHPAGES_DIR
