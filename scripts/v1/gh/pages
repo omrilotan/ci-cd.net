@@ -1,7 +1,7 @@
 source=$1
 if [ -z "$source" ]; then
-    echo "Source was not specified"
-    exit 0;
+	echo "Source was not specified"
+	exit 0;
 fi
 
 message=$2
@@ -13,14 +13,14 @@ origin=$(git config --get remote.origin.url)
 
 exists=$(git ls-remote --heads ${origin} gh-pages)
 
-if [ -z "$exists"]; then
-  mkdir -p GHPAGES_DIR
-  cp -r .git GHPAGES_DIR
-  cd GHPAGES_DIR
-  git checkout -b gh-pages
+if [ -z "$exists" ]; then
+	mkdir -p GHPAGES_DIR
+	cp -r .git GHPAGES_DIR
+	cd GHPAGES_DIR
+	git checkout -b gh-pages
 else
-  git clone -b gh-pages --single-branch $origin GHPAGES_DIR
-  cd GHPAGES_DIR
+	git clone -b gh-pages --single-branch $origin GHPAGES_DIR
+	cd GHPAGES_DIR
 fi
 
 ls | grep -v CNAME | xargs rm -rf

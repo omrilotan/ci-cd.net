@@ -9,8 +9,8 @@ JSON=$2
 : ${JSON:=".webhook.json"}
 
 if [ ! -f $JSON ]; then
-    echo "$JSON JSON File not found, using GET"
-    curl $HOOK
+	echo "$JSON JSON File not found, using GET"
+	curl $HOOK
 	exit 0
 fi
 

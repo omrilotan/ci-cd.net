@@ -1,8 +1,8 @@
 repository=$1
 file=$2
 if [[ -z "$repository" || -z "$file" ]]; then
-    echo "git/cp script requires 2 arguments"
-    exit 1
+	echo "git/cp script requires 2 arguments"
+	exit 1
 fi
 
 name=$3

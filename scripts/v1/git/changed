@@ -1,7 +1,7 @@
 filename=$1
 if [[ -z "$filename" ]]; then
-    echo "git/changed script requires an argument"
-    exit 1
+	echo "git/changed script requires an argument"
+	exit 1
 fi
 
 last_two=$(git log --format="%h" -n1)
@@ -10,7 +10,7 @@ previous=${last_two##*$'\n'}
 matches=$(git diff-tree --no-commit-id --name-only -r $previous | grep -Fcx $filename)
 
 if [ "$matches" == "1" ]; then
-    echo "yes"
+	echo "yes"
 else
-    echo "no"
+	echo "no"
 fi
