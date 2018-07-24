@@ -171,6 +171,26 @@
             "title": "GitHub",
             "sections": [
               {
+                "title": "gh/add-pr",
+                "source": "scripts/v1/gh/add-pr.md",
+                "url": "v1/gh/add-pr.html",
+                "slug": "v1ghadd-pr",
+                "headings": [
+                  {
+                    "title": "Create a Pull Request on GitHub",
+                    "depth": 2,
+                    "id": "create-a-pull-request-on-github",
+                    "headings": [
+                      {
+                        "title": "Arguments",
+                        "depth": 3,
+                        "id": "arguments"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
                 "title": "gh/pr",
                 "source": "scripts/v1/gh/pr.md",
                 "url": "v1/gh/pr.html",
@@ -215,6 +235,19 @@
           {
             "title": "AWS",
             "sections": [
+              {
+                "title": "aws/cli",
+                "source": "scripts/v1/aws/cli.md",
+                "url": "v1/aws/cli.html",
+                "slug": "v1awscli",
+                "headings": [
+                  {
+                    "title": "Install the AWS Command Line Tool `awscli`",
+                    "depth": 2,
+                    "id": "install-the-aws-command-line-tool-awscli"
+                  }
+                ]
+              },
               {
                 "title": "aws/cp",
                 "source": "scripts/v1/aws/cp.md",
@@ -400,6 +433,26 @@
         }
       ]
     },
+    "v1/gh/add-pr.html": {
+      "source": "scripts/v1/gh/add-pr.md",
+      "title": "gh/add-pr - Hosted CI/CD scripts",
+      "pageTitle": "gh/add-pr",
+      "slug": "v1ghadd-pr",
+      "headings": [
+        {
+          "title": "Create a Pull Request on GitHub",
+          "depth": 2,
+          "id": "create-a-pull-request-on-github",
+          "headings": [
+            {
+              "title": "Arguments",
+              "depth": 3,
+              "id": "arguments"
+            }
+          ]
+        }
+      ]
+    },
     "v1/gh/pr.html": {
       "source": "scripts/v1/gh/pr.md",
       "title": "gh/pr - Hosted CI/CD scripts",
@@ -440,6 +493,19 @@
         }
       ]
     },
+    "v1/aws/cli.html": {
+      "source": "scripts/v1/aws/cli.md",
+      "title": "aws/cli - Hosted CI/CD scripts",
+      "pageTitle": "aws/cli",
+      "slug": "v1awscli",
+      "headings": [
+        {
+          "title": "Install the AWS Command Line Tool `awscli`",
+          "depth": 2,
+          "id": "install-the-aws-command-line-tool-awscli"
+        }
+      ]
+    },
     "v1/aws/cp.html": {
       "source": "scripts/v1/aws/cp.md",
       "title": "aws/cp - Hosted CI/CD scripts",
@@ -470,26 +536,28 @@
     "scripts/v1/git/user.md": "v1/git/user.html",
     "scripts/v1/git/update.md": "v1/git/update.html",
     "scripts/v1/git/changed.md": "v1/git/changed.html",
+    "scripts/v1/gh/add-pr.md": "v1/gh/add-pr.html",
     "scripts/v1/gh/pr.md": "v1/gh/pr.html",
     "scripts/v1/gh/pages.md": "v1/gh/pages.html",
+    "scripts/v1/aws/cli.md": "v1/aws/cli.html",
     "scripts/v1/aws/cp.md": "v1/aws/cp.html",
     "scripts/404.html": "404.html",
     "scripts/CNAME": "CNAME",
     "scripts/favicon.ico": "favicon.ico",
     "scripts/script.js": "script.js",
-    "scripts/webhook.json": "webhook.json",
     "scripts/styles.css": "styles.css",
+    "scripts/webhook.json": "webhook.json",
     "scripts/v1/webhook": "v1/webhook",
     "scripts/v1/aws/cli": "v1/aws/cli",
     "scripts/v1/aws/cp": "v1/aws/cp",
-    "scripts/v1/gh/pages": "v1/gh/pages",
     "scripts/v1/gh/add-pr": "v1/gh/add-pr",
+    "scripts/v1/gh/pages": "v1/gh/pages",
     "scripts/v1/gh/pr": "v1/gh/pr",
-    "scripts/v1/git/cp": "v1/git/cp",
     "scripts/v1/git/changed": "v1/git/changed",
+    "scripts/v1/git/cp": "v1/git/cp",
     "scripts/v1/git/echo": "v1/git/echo",
-    "scripts/v1/git/update": "v1/git/update",
     "scripts/v1/git/run": "v1/git/run",
+    "scripts/v1/git/update": "v1/git/update",
     "scripts/v1/git/user": "v1/git/user"
   }
 }
