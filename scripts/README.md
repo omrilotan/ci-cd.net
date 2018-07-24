@@ -9,7 +9,9 @@
 		* [git/update](./v1/git/update.md)
 		* [git/changed](./v1/git/changed.md)
 	* GitHub
+		* [gh/add-pr](./v1/gh/add-pr.md)
 		* [gh/pr](./v1/gh/pr.md)
 		* [gh/pages](./v1/gh/pages.md)
 	* AWS
+		* [aws/cli](./v1/aws/cli.md)
 		* [aws/cp](./v1/aws/cp.md)
