@@ -14,4 +14,3 @@ curl ci-cd.net/v1/gh/pages | bash -s docs/.
 | --- | --- | --- | ---
 | 1 | source | none | Mandatory
 | 2 | commit message | a random commit message from [whatthecommit.com](https://whatthecommit.com/) | Optional
-
