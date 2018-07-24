@@ -1,0 +1,42 @@
+token=$1
+if [ -z "$token" ]; then
+	echo "token was not supplied"
+	exit 1;
+fi
+
+commit=$(git log -1 --pretty=%h)
+
+git add .
+changes=$(git diff $commit)
+if [ -z "$changes" ]; then
+	exit 0
+fi
+
+[ -z $(git config user.name) ] && git config --global user.name $(git log -1 --pretty=%an)
+[ -z $(git config user.email) ] && git config --global user.email $(git log -1 --pretty=%ae)
+
+shift
+message=$@
+: ${message:="$(curl -s whatthecommit.com/index.txt)"}
+
+git commit -m "$message"
+branch=$(git rev-parse --abbrev-ref HEAD)
+git push origin $branch --force-with-lease
+
+regexp="^(https|git)(:\/\/|@)([^\/:]+)[\/:]([^\/:]+)\/(.+).git$"
+url=$(git config --get remote.origin.url)
+if [[ $url =~ $regexp ]]; then
+	# protocol=${BASH_REMATCH[1]}
+	# separator=${BASH_REMATCH[2]}
+	# hostname=${BASH_REMATCH[3]}
+	user=${BASH_REMATCH[4]}
+	repo=${BASH_REMATCH[5]}
+fi
+
+title=$message
+
+curl -i \
+	 -H "Accept: application/json" \
+	 -H "Authorization: token ${token}" \
+	 -X POST -d "{\"title\":\"${title}\",\"head\":\"refs/heads/${branch}\",\"base\":\"master\"}" \
+	 https://api.github.com/repos/${user}/${repo}/pulls
