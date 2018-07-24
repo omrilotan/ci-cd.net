@@ -477,17 +477,19 @@
     "scripts/CNAME": "CNAME",
     "scripts/favicon.ico": "favicon.ico",
     "scripts/script.js": "script.js",
-    "scripts/styles.css": "styles.css",
     "scripts/webhook.json": "webhook.json",
+    "scripts/styles.css": "styles.css",
     "scripts/v1/webhook": "v1/webhook",
+    "scripts/v1/aws/cli": "v1/aws/cli",
     "scripts/v1/aws/cp": "v1/aws/cp",
     "scripts/v1/gh/pages": "v1/gh/pages",
+    "scripts/v1/gh/add-pr": "v1/gh/add-pr",
     "scripts/v1/gh/pr": "v1/gh/pr",
-    "scripts/v1/git/changed": "v1/git/changed",
     "scripts/v1/git/cp": "v1/git/cp",
+    "scripts/v1/git/changed": "v1/git/changed",
     "scripts/v1/git/echo": "v1/git/echo",
-    "scripts/v1/git/run": "v1/git/run",
     "scripts/v1/git/update": "v1/git/update",
+    "scripts/v1/git/run": "v1/git/run",
     "scripts/v1/git/user": "v1/git/user"
   }
 }
