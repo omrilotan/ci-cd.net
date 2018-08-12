@@ -1,6 +1,6 @@
 # Hosted CI/CD scripts
 
-[`status`](http://status.ci-cd.net/78fr2mu6iw5x/4702804)
+[`status`](http://stats.ci-cd.net/4702804)
 
 A collection of hosted CI-CD generic helper scripts, which aim to streamline continues integration and delivery processes across services. This project's goal is to include non business logic scripts which can be used out-of-the-box or adapted by arguments.
 
