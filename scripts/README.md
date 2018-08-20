@@ -12,6 +12,7 @@
 		* [gh/add-pr](./v1/gh/add-pr.md)
 		* [gh/pr](./v1/gh/pr.md)
 		* [gh/pages](./v1/gh/pages.md)
+		* [gh/run](./v1/gh/run.md)
 	* AWS
 		* [aws/cli](./v1/aws/cli.md)
 		* [aws/cp](./v1/aws/cp.md)
