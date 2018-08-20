@@ -1,0 +1,22 @@
+org=$1
+shift
+
+repo=$1
+shift
+
+branch=$1
+shift
+
+file=$1
+shift
+
+token=$1
+shift
+
+script=$(curl \
+					--header "Authorization: token ${token}" \
+					--header 'Accept: application/vnd.github.v3.raw' \
+					--header "User-Agent: ${org}/${repo}" \
+					https://raw.githubusercontent.com/${org}/${repo}/${branch}/${file})
+
+echo "$script" | bash -s $*
