@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="../../styles.css?t=1fbc2c18">
     <script src="../../assets/script.js?t=42463e55"></script>
     <script src="../../script.js?t=c7a06f91"></script>
-    <title>git/exec - Hosted CI/CD scripts</title>
+    <title>gh/run - Hosted CI/CD scripts</title>
     <meta name="viewport" content="width=device-width">
   </head>
   <body class="-menu-visible">
@@ -23,16 +23,6 @@
                 </li>
                 <li class="menu-item -level-2 -parent"><span class="title">Git</span>
                   <ul class="submenu">
-                    <li class="menu-item -level-3"><a class="link title -active link-v1gitexec" href="../../v1/git/exec.html">git/exec</a>
-                      <ul class="headings heading-list">
-                        <li class="heading-item -depth-2"><a class="hlink link-execute-shell-scripts-from-a-remote-git-repository" href="#execute-shell-scripts-from-a-remote-git-repository">Execute shell scripts from a remote git repository</a>
-                          <ul class="heading-list -depth-2">
-                            <li class="heading-item -depth-3"><a class="hlink link-arguments" href="#arguments">Arguments</a>
-                            </li>
-                          </ul>
-                        </li>
-                      </ul>
-                    </li>
                     <li class="menu-item -level-3"><a class="link title  link-v1gitrun" href="../../v1/git/run.html">git/run</a>
                     </li>
                     <li class="menu-item -level-3"><a class="link title  link-v1gitcp" href="../../v1/git/cp.html">git/cp</a>
@@ -55,6 +45,16 @@
                     </li>
                     <li class="menu-item -level-3"><a class="link title  link-v1ghpages" href="../../v1/gh/pages.html">gh/pages</a>
                     </li>
+                    <li class="menu-item -level-3"><a class="link title -active link-v1ghrun" href="../../v1/gh/run.html">gh/run</a>
+                      <ul class="headings heading-list">
+                        <li class="heading-item -depth-2"><a class="hlink link-execute-shell-scripts-from-a-remote-github-repository" href="#execute-shell-scripts-from-a-remote-github-repository">Execute shell scripts from a remote GitHub repository</a>
+                          <ul class="heading-list -depth-2">
+                            <li class="heading-item -depth-3"><a class="hlink link-arguments" href="#arguments">Arguments</a>
+                            </li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
                   </ul>
                 </li>
                 <li class="menu-item -level-2 -parent"><span class="title">AWS</span>
@@ -70,17 +70,17 @@
           </ul>
         </li>
       </div>
-      <div class="body page-v1gitexec">
+      <div class="body page-v1ghrun">
         <div class="header-nav">
           <div class="right"><a class="iconlink" href="https://github.com/omrilotan/ci-cd.net" data-title="omrilotan/ci-cd.net">
               <!-- span.title Open in GitHub--><span class="icon -github"></span></a>
           </div>
         </div>
-        <div class="markdown-body"><h1 id="gitexec">git/exec</h1>
-<h2 id="execute-shell-scripts-from-a-remote-git-repository">Execute shell scripts from a remote git repository</h2>
-<p><a href="https://github.com/omrilotan/ci-cd.net/blob/master/scripts/v1/git/exec"><code>source</code></a></p>
+        <div class="markdown-body"><h1 id="ghrun">gh/run</h1>
+<h2 id="execute-shell-scripts-from-a-remote-github-repository">Execute shell scripts from a remote GitHub repository</h2>
+<p><a href="https://github.com/omrilotan/ci-cd.net/blob/master/scripts/v1/gh/run"><code>source</code></a></p>
 <!--email_off-->
-<pre><code class="lang-sh">curl ci-cd.net/v1/git/<span class="pl-c1">exec</span> | bash <span class="hljs-_">-s</span> user my-repo master scripts/function.sh <span class="hljs-variable">$GIT_API_TOKEN</span> arg1 arg2
+<pre><code class="lang-sh">curl ci-cd.net/v1/gh/run | bash <span class="hljs-_">-s</span> user my-repo master scripts/function.sh <span class="hljs-variable">$GIT_API_TOKEN</span> arg1 arg2
 </code></pre>
 <!--/email_off-->
 <h3 id="arguments">Arguments</h3>
@@ -135,8 +135,8 @@
 
         </div>
         <div class="footer-nav">
-          <div class="left"><a href="../../v1/webhook.html"><span class="title">webhook</span></a></div>
-          <div class="right"><a href="../../v1/git/run.html"><span class="label">Next: </span><span class="title">git/run</span></a></div>
+          <div class="left"><a href="../../v1/gh/pages.html"><span class="title">gh/pages</span></a></div>
+          <div class="right"><a href="../../v1/aws/cli.html"><span class="label">Next: </span><span class="title">aws/cli</span></a></div>
         </div>
       </div>
     </div>

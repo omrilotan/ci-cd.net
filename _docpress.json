@@ -41,35 +41,15 @@
             "title": "Git",
             "sections": [
               {
-                "title": "git/exec",
-                "source": "scripts/v1/git/exec.md",
-                "url": "v1/git/exec.html",
-                "slug": "v1gitexec",
-                "headings": [
-                  {
-                    "title": "Execute shell scripts from a remote git repository",
-                    "depth": 2,
-                    "id": "execute-shell-scripts-from-a-remote-git-repository",
-                    "headings": [
-                      {
-                        "title": "Arguments",
-                        "depth": 3,
-                        "id": "arguments"
-                      }
-                    ]
-                  }
-                ]
-              },
-              {
                 "title": "git/run",
                 "source": "scripts/v1/git/run.md",
                 "url": "v1/git/run.html",
                 "slug": "v1gitrun",
                 "headings": [
                   {
-                    "title": "Run shell scripts right from a repository in context",
+                    "title": "Run shell scripts right from a repository",
                     "depth": 2,
-                    "id": "run-shell-scripts-right-from-a-repository-in-context",
+                    "id": "run-shell-scripts-right-from-a-repository",
                     "headings": [
                       {
                         "title": "Arguments",
@@ -249,6 +229,26 @@
                     ]
                   }
                 ]
+              },
+              {
+                "title": "gh/run",
+                "source": "scripts/v1/gh/run.md",
+                "url": "v1/gh/run.html",
+                "slug": "v1ghrun",
+                "headings": [
+                  {
+                    "title": "Execute shell scripts from a remote GitHub repository",
+                    "depth": 2,
+                    "id": "execute-shell-scripts-from-a-remote-github-repository",
+                    "headings": [
+                      {
+                        "title": "Arguments",
+                        "depth": 3,
+                        "id": "arguments"
+                      }
+                    ]
+                  }
+                ]
               }
             ]
           },
@@ -328,26 +328,6 @@
         }
       ]
     },
-    "v1/git/exec.html": {
-      "source": "scripts/v1/git/exec.md",
-      "title": "git/exec - Hosted CI/CD scripts",
-      "pageTitle": "git/exec",
-      "slug": "v1gitexec",
-      "headings": [
-        {
-          "title": "Execute shell scripts from a remote git repository",
-          "depth": 2,
-          "id": "execute-shell-scripts-from-a-remote-git-repository",
-          "headings": [
-            {
-              "title": "Arguments",
-              "depth": 3,
-              "id": "arguments"
-            }
-          ]
-        }
-      ]
-    },
     "v1/git/run.html": {
       "source": "scripts/v1/git/run.md",
       "title": "git/run - Hosted CI/CD scripts",
@@ -355,9 +335,9 @@
       "slug": "v1gitrun",
       "headings": [
         {
-          "title": "Run shell scripts right from a repository in context",
+          "title": "Run shell scripts right from a repository",
           "depth": 2,
-          "id": "run-shell-scripts-right-from-a-repository-in-context",
+          "id": "run-shell-scripts-right-from-a-repository",
           "headings": [
             {
               "title": "Arguments",
@@ -533,6 +513,26 @@
         }
       ]
     },
+    "v1/gh/run.html": {
+      "source": "scripts/v1/gh/run.md",
+      "title": "gh/run - Hosted CI/CD scripts",
+      "pageTitle": "gh/run",
+      "slug": "v1ghrun",
+      "headings": [
+        {
+          "title": "Execute shell scripts from a remote GitHub repository",
+          "depth": 2,
+          "id": "execute-shell-scripts-from-a-remote-github-repository",
+          "headings": [
+            {
+              "title": "Arguments",
+              "depth": 3,
+              "id": "arguments"
+            }
+          ]
+        }
+      ]
+    },
     "v1/aws/cli.html": {
       "source": "scripts/v1/aws/cli.md",
       "title": "aws/cli - Hosted CI/CD scripts",
@@ -570,7 +570,6 @@
   "sources": {
     "scripts/v1/index.md": "index.html",
     "scripts/v1/webhook.md": "v1/webhook.html",
-    "scripts/v1/git/exec.md": "v1/git/exec.html",
     "scripts/v1/git/run.md": "v1/git/run.html",
     "scripts/v1/git/cp.md": "v1/git/cp.html",
     "scripts/v1/git/echo.md": "v1/git/echo.html",
@@ -580,6 +579,7 @@
     "scripts/v1/gh/add-pr.md": "v1/gh/add-pr.html",
     "scripts/v1/gh/pr.md": "v1/gh/pr.html",
     "scripts/v1/gh/pages.md": "v1/gh/pages.html",
+    "scripts/v1/gh/run.md": "v1/gh/run.html",
     "scripts/v1/aws/cli.md": "v1/aws/cli.html",
     "scripts/v1/aws/cp.md": "v1/aws/cp.html",
     "scripts/404.html": "404.html",
@@ -594,10 +594,10 @@
     "scripts/v1/gh/add-pr": "v1/gh/add-pr",
     "scripts/v1/gh/pages": "v1/gh/pages",
     "scripts/v1/gh/pr": "v1/gh/pr",
+    "scripts/v1/gh/run": "v1/gh/run",
     "scripts/v1/git/changed": "v1/git/changed",
     "scripts/v1/git/cp": "v1/git/cp",
     "scripts/v1/git/echo": "v1/git/echo",
-    "scripts/v1/git/exec": "v1/git/exec",
     "scripts/v1/git/run": "v1/git/run",
     "scripts/v1/git/update": "v1/git/update",
     "scripts/v1/git/user": "v1/git/user"
