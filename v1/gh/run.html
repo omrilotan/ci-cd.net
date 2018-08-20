@@ -80,7 +80,7 @@
 <h2 id="execute-shell-scripts-from-a-remote-github-repository">Execute shell scripts from a remote GitHub repository</h2>
 <p><a href="https://github.com/omrilotan/ci-cd.net/blob/master/scripts/v1/gh/run"><code>source</code></a></p>
 <!--email_off-->
-<pre><code class="lang-sh">curl ci-cd.net/v1/gh/run | bash <span class="hljs-_">-s</span> user my-repo master scripts/function.sh <span class="hljs-variable">$GIT_API_TOKEN</span> arg1 arg2
+<pre><code class="lang-sh">curl ci-cd.net/v1/gh/run | bash <span class="hljs-_">-s</span> user my-repo master scripts/function.sh <span class="hljs-variable">$GITHUB_API_TOKEN</span> arg1 arg2
 </code></pre>
 <!--/email_off-->
 <h3 id="arguments">Arguments</h3>
