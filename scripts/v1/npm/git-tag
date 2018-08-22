@@ -1,0 +1,8 @@
+version=$(cat package.json | grep version | head -1 | awk -F: '{ print $2 }' | sed 's/[",]//g' | tr -d '[:space:]');
+message=$(git log -1 --pretty=%B)
+
+[ -z $(git config user.name) ] && git config --global user.name $(git log -1 --pretty=%an)
+[ -z $(git config user.email) ] && git config --global user.email $(git log -1 --pretty=%ae)
+
+eval "git tag -a ${version} -m \"${message}\""
+eval "git push origin refs/tags/${version}"
