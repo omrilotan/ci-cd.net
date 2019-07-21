@@ -1,8 +1,7 @@
-if ! which aws > /dev/null; then
-	sudo apt update
-	sudo apt install python3-pip
-	pip3 install awscli --upgrade --user
-	sudo ln -s ~/.local/bin/aws /usr/bin
-else
-	echo "awscli already installed"
-fi
+sudo rm -rf /usr/local/aws
+sudo rm -f /usr/local/bin/aws
+
+sudo apt -y update
+sudo apt -y install python3-pip
+pip3 install awscli --upgrade --user
+sudo ln -s ~/.local/bin/aws /usr/bin
