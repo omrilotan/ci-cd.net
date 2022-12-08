@@ -17,7 +17,7 @@ fi
 
 shift
 message=$@
-: ${message:="$(curl -s whatthecommit.com/index.txt)"}
+: ${message:="$(curl -s https://whatthecommit.com/index.txt)"}
 
 git commit -m "$message"
 branch=$(git rev-parse --abbrev-ref HEAD)
