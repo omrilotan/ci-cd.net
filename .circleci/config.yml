@@ -17,10 +17,10 @@ jobs:
           command: cp -R .circleci/ gh-pages/.circleci
       - run:
           name: Set git user
-          command: cat ./scripts/v1/git/user | sh -s a1vy a01101100vy@gmail.com
+          command: cat ./src/v1/git/user | sh -s a1vy a01101100vy@gmail.com
       - run:
           name: Push to gh-pages
-          command: cat ./scripts/v1/gh/pages | sh -s gh-pages/.
+          command: cat ./src/v1/gh/pages | sh -s gh-pages/.
   published:
     <<: *defaults
     steps:
@@ -45,7 +45,7 @@ workflows:
           filters:
             branches:
               only:
-                - master
+                - main
   refresh-website:
     jobs:
       - published:
@@ -58,5 +58,5 @@ experimental:
   notify:
     branches:
       only:
-        - master
+        - main
         - gh-pages

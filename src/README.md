@@ -16,3 +16,5 @@
 	* AWS
 		* [aws/cli](./v1/aws/cli.md)
 		* [aws/cp](./v1/aws/cp.md)
+* Articles
+	* [Agnostic CI/CD Scripts](./articles/agnostic-scripts.md)
