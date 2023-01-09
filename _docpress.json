@@ -3,7 +3,7 @@
     "sections": [
       {
         "title": "Hosted CI/CD scripts",
-        "source": "scripts/v1/index.md",
+        "source": "src/v1/index.md",
         "url": "index.html",
         "slug": "index",
         "headings": [
@@ -19,7 +19,7 @@
         "sections": [
           {
             "title": "webhook",
-            "source": "scripts/v1/webhook.md",
+            "source": "src/v1/webhook.md",
             "url": "v1/webhook.html",
             "slug": "v1webhook",
             "headings": [
@@ -42,7 +42,7 @@
             "sections": [
               {
                 "title": "git/run",
-                "source": "scripts/v1/git/run.md",
+                "source": "src/v1/git/run.md",
                 "url": "v1/git/run.html",
                 "slug": "v1gitrun",
                 "headings": [
@@ -62,7 +62,7 @@
               },
               {
                 "title": "git/cp",
-                "source": "scripts/v1/git/cp.md",
+                "source": "src/v1/git/cp.md",
                 "url": "v1/git/cp.html",
                 "slug": "v1gitcp",
                 "headings": [
@@ -82,7 +82,7 @@
               },
               {
                 "title": "git/echo",
-                "source": "scripts/v1/git/echo.md",
+                "source": "src/v1/git/echo.md",
                 "url": "v1/git/echo.html",
                 "slug": "v1gitecho",
                 "headings": [
@@ -107,7 +107,7 @@
               },
               {
                 "title": "git/user",
-                "source": "scripts/v1/git/user.md",
+                "source": "src/v1/git/user.md",
                 "url": "v1/git/user.html",
                 "slug": "v1gituser",
                 "headings": [
@@ -127,7 +127,7 @@
               },
               {
                 "title": "git/update",
-                "source": "scripts/v1/git/update.md",
+                "source": "src/v1/git/update.md",
                 "url": "v1/git/update.html",
                 "slug": "v1gitupdate",
                 "headings": [
@@ -147,7 +147,7 @@
               },
               {
                 "title": "git/changed",
-                "source": "scripts/v1/git/changed.md",
+                "source": "src/v1/git/changed.md",
                 "url": "v1/git/changed.html",
                 "slug": "v1gitchanged",
                 "headings": [
@@ -172,7 +172,7 @@
             "sections": [
               {
                 "title": "gh/add-pr",
-                "source": "scripts/v1/gh/add-pr.md",
+                "source": "src/v1/gh/add-pr.md",
                 "url": "v1/gh/add-pr.html",
                 "slug": "v1ghadd-pr",
                 "headings": [
@@ -192,7 +192,7 @@
               },
               {
                 "title": "gh/pr",
-                "source": "scripts/v1/gh/pr.md",
+                "source": "src/v1/gh/pr.md",
                 "url": "v1/gh/pr.html",
                 "slug": "v1ghpr",
                 "headings": [
@@ -212,7 +212,7 @@
               },
               {
                 "title": "gh/pages",
-                "source": "scripts/v1/gh/pages.md",
+                "source": "src/v1/gh/pages.md",
                 "url": "v1/gh/pages.html",
                 "slug": "v1ghpages",
                 "headings": [
@@ -232,7 +232,7 @@
               },
               {
                 "title": "gh/run",
-                "source": "scripts/v1/gh/run.md",
+                "source": "src/v1/gh/run.md",
                 "url": "v1/gh/run.html",
                 "slug": "v1ghrun",
                 "headings": [
@@ -257,7 +257,7 @@
             "sections": [
               {
                 "title": "aws/cli",
-                "source": "scripts/v1/aws/cli.md",
+                "source": "src/v1/aws/cli.md",
                 "url": "v1/aws/cli.html",
                 "slug": "v1awscli",
                 "headings": [
@@ -270,7 +270,7 @@
               },
               {
                 "title": "aws/cp",
-                "source": "scripts/v1/aws/cp.md",
+                "source": "src/v1/aws/cp.md",
                 "url": "v1/aws/cp.html",
                 "slug": "v1awscp",
                 "headings": [
@@ -291,12 +291,75 @@
             ]
           }
         ]
+      },
+      {
+        "title": "Articles",
+        "sections": [
+          {
+            "title": "Agnostic CI/CD Scripts",
+            "source": "src/articles/agnostic-scripts.md",
+            "url": "articles/agnostic-scripts.html",
+            "slug": "articlesagnostic-scripts",
+            "headings": [
+              {
+                "title": "What is CI/CD?",
+                "depth": 2,
+                "id": "what-is-cicd"
+              },
+              {
+                "title": "Advantages of Platform-Neutral CI/CD Scripts",
+                "depth": 2,
+                "id": "advantages-of-platform-neutral-cicd-scripts"
+              },
+              {
+                "title": "The Difference Between Platform Agnostic and Platform-Specific CI/CD Scripts",
+                "depth": 2,
+                "id": "the-difference-between-platform-agnostic-and-platform-specific-cicd-scripts"
+              },
+              {
+                "title": "Portable CI/CD Scripts",
+                "depth": 2,
+                "id": "portable-cicd-scripts"
+              },
+              {
+                "title": "Streamlining Continuous Integration and Delivery",
+                "depth": 2,
+                "id": "streamlining-continuous-integration-and-delivery"
+              },
+              {
+                "title": "Creating and Executing Platform-Independent CI/CD Scripts",
+                "depth": 2,
+                "id": "creating-and-executing-platform-independent-cicd-scripts"
+              },
+              {
+                "title": "Challenges of Platform Agnostic CI/CD Scripts",
+                "depth": 2,
+                "id": "challenges-of-platform-agnostic-cicd-scripts"
+              },
+              {
+                "title": "Writing Platform-Neutral CI/CD Scripting Tools",
+                "depth": 2,
+                "id": "writing-platform-neutral-cicd-scripting-tools"
+              },
+              {
+                "title": "Automation of Platform-neutral CI/CD Scripts",
+                "depth": 2,
+                "id": "automation-of-platform-neutral-cicd-scripts"
+              },
+              {
+                "title": "Conclusion",
+                "depth": 2,
+                "id": "conclusion"
+              }
+            ]
+          }
+        ]
       }
     ]
   },
   "index": {
     "index.html": {
-      "source": "scripts/v1/index.md",
+      "source": "src/v1/index.md",
       "title": "Hosted CI/CD scripts",
       "pageTitle": "Hosted CI/CD scripts",
       "slug": "index",
@@ -309,7 +372,7 @@
       ]
     },
     "v1/webhook.html": {
-      "source": "scripts/v1/webhook.md",
+      "source": "src/v1/webhook.md",
       "title": "webhook - Hosted CI/CD scripts",
       "pageTitle": "webhook",
       "slug": "v1webhook",
@@ -329,7 +392,7 @@
       ]
     },
     "v1/git/run.html": {
-      "source": "scripts/v1/git/run.md",
+      "source": "src/v1/git/run.md",
       "title": "git/run - Hosted CI/CD scripts",
       "pageTitle": "git/run",
       "slug": "v1gitrun",
@@ -349,7 +412,7 @@
       ]
     },
     "v1/git/cp.html": {
-      "source": "scripts/v1/git/cp.md",
+      "source": "src/v1/git/cp.md",
       "title": "git/cp - Hosted CI/CD scripts",
       "pageTitle": "git/cp",
       "slug": "v1gitcp",
@@ -369,7 +432,7 @@
       ]
     },
     "v1/git/echo.html": {
-      "source": "scripts/v1/git/echo.md",
+      "source": "src/v1/git/echo.md",
       "title": "git/echo - Hosted CI/CD scripts",
       "pageTitle": "git/echo",
       "slug": "v1gitecho",
@@ -394,7 +457,7 @@
       ]
     },
     "v1/git/user.html": {
-      "source": "scripts/v1/git/user.md",
+      "source": "src/v1/git/user.md",
       "title": "git/user - Hosted CI/CD scripts",
       "pageTitle": "git/user",
       "slug": "v1gituser",
@@ -414,7 +477,7 @@
       ]
     },
     "v1/git/update.html": {
-      "source": "scripts/v1/git/update.md",
+      "source": "src/v1/git/update.md",
       "title": "git/update - Hosted CI/CD scripts",
       "pageTitle": "git/update",
       "slug": "v1gitupdate",
@@ -434,7 +497,7 @@
       ]
     },
     "v1/git/changed.html": {
-      "source": "scripts/v1/git/changed.md",
+      "source": "src/v1/git/changed.md",
       "title": "git/changed - Hosted CI/CD scripts",
       "pageTitle": "git/changed",
       "slug": "v1gitchanged",
@@ -454,7 +517,7 @@
       ]
     },
     "v1/gh/add-pr.html": {
-      "source": "scripts/v1/gh/add-pr.md",
+      "source": "src/v1/gh/add-pr.md",
       "title": "gh/add-pr - Hosted CI/CD scripts",
       "pageTitle": "gh/add-pr",
       "slug": "v1ghadd-pr",
@@ -474,7 +537,7 @@
       ]
     },
     "v1/gh/pr.html": {
-      "source": "scripts/v1/gh/pr.md",
+      "source": "src/v1/gh/pr.md",
       "title": "gh/pr - Hosted CI/CD scripts",
       "pageTitle": "gh/pr",
       "slug": "v1ghpr",
@@ -494,7 +557,7 @@
       ]
     },
     "v1/gh/pages.html": {
-      "source": "scripts/v1/gh/pages.md",
+      "source": "src/v1/gh/pages.md",
       "title": "gh/pages - Hosted CI/CD scripts",
       "pageTitle": "gh/pages",
       "slug": "v1ghpages",
@@ -514,7 +577,7 @@
       ]
     },
     "v1/gh/run.html": {
-      "source": "scripts/v1/gh/run.md",
+      "source": "src/v1/gh/run.md",
       "title": "gh/run - Hosted CI/CD scripts",
       "pageTitle": "gh/run",
       "slug": "v1ghrun",
@@ -534,7 +597,7 @@
       ]
     },
     "v1/aws/cli.html": {
-      "source": "scripts/v1/aws/cli.md",
+      "source": "src/v1/aws/cli.md",
       "title": "aws/cli - Hosted CI/CD scripts",
       "pageTitle": "aws/cli",
       "slug": "v1awscli",
@@ -547,7 +610,7 @@
       ]
     },
     "v1/aws/cp.html": {
-      "source": "scripts/v1/aws/cp.md",
+      "source": "src/v1/aws/cp.md",
       "title": "aws/cp - Hosted CI/CD scripts",
       "pageTitle": "aws/cp",
       "slug": "v1awscp",
@@ -565,41 +628,100 @@
           ]
         }
       ]
+    },
+    "articles/agnostic-scripts.html": {
+      "source": "src/articles/agnostic-scripts.md",
+      "title": "Agnostic CI/CD Scripts - Hosted CI/CD scripts",
+      "pageTitle": "Agnostic CI/CD Scripts",
+      "slug": "articlesagnostic-scripts",
+      "headings": [
+        {
+          "title": "What is CI/CD?",
+          "depth": 2,
+          "id": "what-is-cicd"
+        },
+        {
+          "title": "Advantages of Platform-Neutral CI/CD Scripts",
+          "depth": 2,
+          "id": "advantages-of-platform-neutral-cicd-scripts"
+        },
+        {
+          "title": "The Difference Between Platform Agnostic and Platform-Specific CI/CD Scripts",
+          "depth": 2,
+          "id": "the-difference-between-platform-agnostic-and-platform-specific-cicd-scripts"
+        },
+        {
+          "title": "Portable CI/CD Scripts",
+          "depth": 2,
+          "id": "portable-cicd-scripts"
+        },
+        {
+          "title": "Streamlining Continuous Integration and Delivery",
+          "depth": 2,
+          "id": "streamlining-continuous-integration-and-delivery"
+        },
+        {
+          "title": "Creating and Executing Platform-Independent CI/CD Scripts",
+          "depth": 2,
+          "id": "creating-and-executing-platform-independent-cicd-scripts"
+        },
+        {
+          "title": "Challenges of Platform Agnostic CI/CD Scripts",
+          "depth": 2,
+          "id": "challenges-of-platform-agnostic-cicd-scripts"
+        },
+        {
+          "title": "Writing Platform-Neutral CI/CD Scripting Tools",
+          "depth": 2,
+          "id": "writing-platform-neutral-cicd-scripting-tools"
+        },
+        {
+          "title": "Automation of Platform-neutral CI/CD Scripts",
+          "depth": 2,
+          "id": "automation-of-platform-neutral-cicd-scripts"
+        },
+        {
+          "title": "Conclusion",
+          "depth": 2,
+          "id": "conclusion"
+        }
+      ]
     }
   },
   "sources": {
-    "scripts/v1/index.md": "index.html",
-    "scripts/v1/webhook.md": "v1/webhook.html",
-    "scripts/v1/git/run.md": "v1/git/run.html",
-    "scripts/v1/git/cp.md": "v1/git/cp.html",
-    "scripts/v1/git/echo.md": "v1/git/echo.html",
-    "scripts/v1/git/user.md": "v1/git/user.html",
-    "scripts/v1/git/update.md": "v1/git/update.html",
-    "scripts/v1/git/changed.md": "v1/git/changed.html",
-    "scripts/v1/gh/add-pr.md": "v1/gh/add-pr.html",
-    "scripts/v1/gh/pr.md": "v1/gh/pr.html",
-    "scripts/v1/gh/pages.md": "v1/gh/pages.html",
-    "scripts/v1/gh/run.md": "v1/gh/run.html",
-    "scripts/v1/aws/cli.md": "v1/aws/cli.html",
-    "scripts/v1/aws/cp.md": "v1/aws/cp.html",
-    "scripts/404.html": "404.html",
-    "scripts/CNAME": "CNAME",
-    "scripts/favicon.ico": "favicon.ico",
-    "scripts/script.js": "script.js",
-    "scripts/styles.css": "styles.css",
-    "scripts/webhook.json": "webhook.json",
-    "scripts/v1/webhook": "v1/webhook",
-    "scripts/v1/aws/cli": "v1/aws/cli",
-    "scripts/v1/aws/cp": "v1/aws/cp",
-    "scripts/v1/gh/add-pr": "v1/gh/add-pr",
-    "scripts/v1/gh/pages": "v1/gh/pages",
-    "scripts/v1/gh/pr": "v1/gh/pr",
-    "scripts/v1/gh/run": "v1/gh/run",
-    "scripts/v1/git/changed": "v1/git/changed",
-    "scripts/v1/git/cp": "v1/git/cp",
-    "scripts/v1/git/echo": "v1/git/echo",
-    "scripts/v1/git/run": "v1/git/run",
-    "scripts/v1/git/update": "v1/git/update",
-    "scripts/v1/git/user": "v1/git/user"
+    "src/v1/index.md": "index.html",
+    "src/v1/webhook.md": "v1/webhook.html",
+    "src/v1/git/run.md": "v1/git/run.html",
+    "src/v1/git/cp.md": "v1/git/cp.html",
+    "src/v1/git/echo.md": "v1/git/echo.html",
+    "src/v1/git/user.md": "v1/git/user.html",
+    "src/v1/git/update.md": "v1/git/update.html",
+    "src/v1/git/changed.md": "v1/git/changed.html",
+    "src/v1/gh/add-pr.md": "v1/gh/add-pr.html",
+    "src/v1/gh/pr.md": "v1/gh/pr.html",
+    "src/v1/gh/pages.md": "v1/gh/pages.html",
+    "src/v1/gh/run.md": "v1/gh/run.html",
+    "src/v1/aws/cli.md": "v1/aws/cli.html",
+    "src/v1/aws/cp.md": "v1/aws/cp.html",
+    "src/articles/agnostic-scripts.md": "articles/agnostic-scripts.html",
+    "src/404.html": "404.html",
+    "src/CNAME": "CNAME",
+    "src/favicon.ico": "favicon.ico",
+    "src/script.js": "script.js",
+    "src/styles.css": "styles.css",
+    "src/webhook.json": "webhook.json",
+    "src/v1/webhook": "v1/webhook",
+    "src/v1/aws/cli": "v1/aws/cli",
+    "src/v1/aws/cp": "v1/aws/cp",
+    "src/v1/gh/add-pr": "v1/gh/add-pr",
+    "src/v1/gh/pages": "v1/gh/pages",
+    "src/v1/gh/pr": "v1/gh/pr",
+    "src/v1/gh/run": "v1/gh/run",
+    "src/v1/git/changed": "v1/git/changed",
+    "src/v1/git/cp": "v1/git/cp",
+    "src/v1/git/echo": "v1/git/echo",
+    "src/v1/git/run": "v1/git/run",
+    "src/v1/git/update": "v1/git/update",
+    "src/v1/git/user": "v1/git/user"
   }
 }
