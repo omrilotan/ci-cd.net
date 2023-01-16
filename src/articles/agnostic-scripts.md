@@ -1,9 +1,5 @@
 # Streamlining Continuous Integration and Delivery with Platform Agnostic CI/CD Scripts
 
-![](https://pixabay.com/get/g2b0ab97c56a8813a356d335d03914ac1cfdf00985e52b7fe85ce0cbed4c0dfa1f7996b00d4eb0402b2d10657a5a14b5574b26b1cad7d75f52db5cc682bd0337a_1280.jpg)
-‍
-Photo by [mohamed_hassan](https://pixabay.com/users/mohamed_hassan-5229782/) on [Pixabay](https://pixabay.com/illustrations/voice-search-software-application-4071801/)
-
 For effective software development, continuous integration and delivery (CI/CD) are two of the most crucial procedures.
 It entails merging code modifications, compiling them, and then deploying them to a live environment.
 From development to production, CI/CD is often carried out in phases and typically incorporates automation, such as the use of scripts. However, the complexity of CI/CD and the challenge of creating platform-specific scripts cause problems for many enterprises. Platform-independent CI/CD scripts can help in this situation. Organizations may simplify the CI/CD process and lower its complexity and expense by adopting platform-independent scripts.
