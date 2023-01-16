@@ -1,7 +1,7 @@
 # git/cp
 
 ## Copy a file right from a repository
-[`source`](https://github.com/omrilotan/ci-cd.net/blob/master/scripts/v1/git/cp)
+[`source`](https://github.com/omrilotan/ci-cd.net/blob/main/src/v1/git/cp)
 
 <!--email_off-->
 ```sh

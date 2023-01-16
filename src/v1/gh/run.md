@@ -1,7 +1,7 @@
 # gh/run
 
 ## Execute shell scripts from a remote GitHub repository
-[`source`](https://github.com/omrilotan/ci-cd.net/blob/master/scripts/v1/gh/run)
+[`source`](https://github.com/omrilotan/ci-cd.net/blob/main/src/v1/gh/run)
 
 <!--email_off-->
 ```sh

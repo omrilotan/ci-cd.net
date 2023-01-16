@@ -1,7 +1,7 @@
 # gh/add-pr
 
 ## Create a Pull Request on GitHub
-[`source`](https://github.com/omrilotan/ci-cd.net/blob/master/scripts/v1/gh/add-pr)
+[`source`](https://github.com/omrilotan/ci-cd.net/blob/main/src/v1/gh/add-pr)
 
 *Bundle*: Add, commit and create pull request. (For OR only use `/v1/gh/pr`)
 
