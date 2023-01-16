@@ -296,6 +296,29 @@
         "title": "Articles",
         "sections": [
           {
+            "title": "Save time and guard your code",
+            "source": "src/articles/time-saver.md",
+            "url": "articles/time-saver.html",
+            "slug": "articlestime-saver",
+            "headings": [
+              {
+                "title": "CI/CD is there to take over repetative tasks",
+                "depth": 2,
+                "id": "cicd-is-there-to-take-over-repetative-tasks"
+              },
+              {
+                "title": "Example of a CI/CD pipeline",
+                "depth": 2,
+                "id": "example-of-a-cicd-pipeline"
+              },
+              {
+                "title": "Does my project need CI/CD?",
+                "depth": 2,
+                "id": "does-my-project-need-cicd"
+              }
+            ]
+          },
+          {
             "title": "Agnostic CI/CD Scripts",
             "source": "src/articles/agnostic-scripts.md",
             "url": "articles/agnostic-scripts.html",
@@ -629,6 +652,29 @@
         }
       ]
     },
+    "articles/time-saver.html": {
+      "source": "src/articles/time-saver.md",
+      "title": "Save time and guard your code - Hosted CI/CD scripts",
+      "pageTitle": "Save time and guard your code",
+      "slug": "articlestime-saver",
+      "headings": [
+        {
+          "title": "CI/CD is there to take over repetative tasks",
+          "depth": 2,
+          "id": "cicd-is-there-to-take-over-repetative-tasks"
+        },
+        {
+          "title": "Example of a CI/CD pipeline",
+          "depth": 2,
+          "id": "example-of-a-cicd-pipeline"
+        },
+        {
+          "title": "Does my project need CI/CD?",
+          "depth": 2,
+          "id": "does-my-project-need-cicd"
+        }
+      ]
+    },
     "articles/agnostic-scripts.html": {
       "source": "src/articles/agnostic-scripts.md",
       "title": "Agnostic CI/CD Scripts - Hosted CI/CD scripts",
@@ -703,6 +749,7 @@
     "src/v1/gh/run.md": "v1/gh/run.html",
     "src/v1/aws/cli.md": "v1/aws/cli.html",
     "src/v1/aws/cp.md": "v1/aws/cp.html",
+    "src/articles/time-saver.md": "articles/time-saver.html",
     "src/articles/agnostic-scripts.md": "articles/agnostic-scripts.html",
     "src/404.html": "404.html",
     "src/CNAME": "CNAME",
