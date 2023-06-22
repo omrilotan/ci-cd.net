@@ -6,10 +6,9 @@ if [ -z $source || $destination ]; then
 fi
 
 if ! which aws > /dev/null; then
-	sudo apt update
-	sudo apt install python3-pip
-	pip3 install awscli --upgrade --user
-	sudo ln -s ~/.local/bin/aws /usr/bin
+	curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+	unzip awscliv2.zip
+	sudo ./aws/install
 fi
 
 exclude=$3
