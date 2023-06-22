@@ -7,4 +7,4 @@
 curl ci-cd.net/v1/aws/cli | bash
 ```
 
-Installs dependencies (python pip) and `awscli`
+Installs awscli
