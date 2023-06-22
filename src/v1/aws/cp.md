@@ -7,7 +7,7 @@
 curl ci-cd.net/v1/aws/cp | bash -s docs/ s3://docs.website.com/ *.log
 ```
 
-Upload file structure to S3 (recursive). Uses awscli (via pip).
+Upload file structure to S3 (recursive). Uses awscli.
 
 ### Arguments
 
